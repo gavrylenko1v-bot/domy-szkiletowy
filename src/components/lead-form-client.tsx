@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { publishedHouses } from "@/content/houses";
-import { packages, regions } from "@/content/site";
+import { packages, regions, site } from "@/content/site";
 import { ArrowUpRight, Check, LoaderCircle } from "./icons";
 export function LeadFormClient({
   projectId = "",
@@ -250,6 +250,7 @@ export function LeadFormClient({
           <ArrowUpRight size={18} />
         )}
       </button>
+      {!available && site.email && <p className="form-direct-contact">Możesz napisać bezpośrednio: <a href={`mailto:${site.email}`}>{site.email}</a>.</p>}
       <p className="fine">
         Wysłanie zapytania nie jest zamówieniem ani zawarciem umowy.
       </p>

@@ -2,16 +2,16 @@ export const site = {
   // Approved trading brand. Complete legal entity and contact data before publication.
   name: "VERTEX I.S.O",
   legalName: "",
-  nip: "",
+  nip: "8961975715", // Supplied and reconfirmed by the owner; checksum requires correction before legal launch.
   address: "",
   phone: "",
-  email: "",
+  email: "vertex7706@gmail.com",
   tagline: "Dom zaczyna się od Ciebie.",
   about:
     "Wierzymy, że dobry dom zaczyna się od uważnej rozmowy. Ten katalog pomaga porównać funkcjonalne koncepcje domów szkieletowych i przygotować pytania o budowę.",
   serviceArea:
-    "Możliwość realizacji w Twojej lokalizacji potwierdzamy indywidualnie.",
-  website: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    "Wrocław i okolice w promieniu do 100 km. Dostępność realizacji potwierdzamy dla konkretnej działki.",
+  website: process.env.NEXT_PUBLIC_SITE_URL || (process.env.NODE_ENV === "production" ? "https://domy-szkiletowy.vercel.app" : "http://localhost:3000"),
   published: process.env.SITE_PUBLISHED === "true",
 };
 export const packages = [
@@ -88,7 +88,7 @@ export const faq = [
   ],
   [
     "Gdzie możliwa jest realizacja?",
-    "Obszar obsługi nie został jeszcze potwierdzony. Podaj województwo w zapytaniu; możliwość realizacji wymaga indywidualnego potwierdzenia.",
+    "Wrocław i okolice w promieniu do 100 km. Podaj lokalizację działki w zapytaniu — potwierdzimy dostępność oraz warunki realizacji.",
   ],
   [
     "Jak długo trwa budowa?",

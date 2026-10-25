@@ -57,9 +57,7 @@ export default function Page() {
             </div>
           </div>
           <div className="notice">
-            Przed wysłaniem zapytania upewnij się, że obsługa formularza jest
-            aktywna. W wersji przygotowawczej integracja pocztowa wymaga
-            konfiguracji.
+            Jeśli formularz jest niedostępny, napisz bezpośrednio na podany adres e-mail. W wiadomości możesz wskazać wybraną koncepcję i województwo.
           </div>
         </div>
         <div className="quote-form-panel" id="wycena">

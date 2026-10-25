@@ -17,7 +17,7 @@ import { metadata } from "@/lib/seo";
 export const generateMetadata = () =>
   metadata(
     "Nowoczesne domy szkieletowe dopasowane do Ciebie",
-    "Koncepcje domów drewnianych do 70 m² powierzchni zabudowy. Poznaj projekty parterowe i z poddaszem, technologię i możliwości indywidualnej wyceny.",
+    "Koncepcje domów drewnianych do 70 m² łącznej powierzchni podłóg. Poznaj projekty parterowe i z poddaszem, technologię i możliwości indywidualnej wyceny.",
     "/",
   );
 export default function Home() {
@@ -34,17 +34,15 @@ export default function Home() {
           <h1>
             Nowoczesne domy szkieletowe
             <br className="desktop-break" />{" "}
-            <span>dopasowane do Twoich potrzeb.</span>
+            <span>dopasowane do Ciebie.</span>
           </h1>
           <div className="hero-aside">
             <p>
-              Naturalne materiały. Przemyślana przestrzeń.
-              <br />
-              Odkryj koncepcję domu, w którym
-              <br className="desktop-break" /> zacznie się Twój nowy rozdział.
+              Przemyślane domy do 70 m². Naturalne materiały.
+              Indywidualna wycena dla Twojej działki.
             </p>
             <Link href="/projekty" className="text-link">
-              Poznaj nasze podejście <ArrowUpRight size={16} />
+              Wybierz swoją koncepcję <ArrowUpRight size={16} />
             </Link>
           </div>
         </div>
@@ -65,7 +63,7 @@ export default function Home() {
             <div>
               <span className="hero-model">KOMFORT 60</span>
               <p>
-                60 m² zabudowy <span>·</span> 2 sypialnie <span>·</span> Dom
+                48,81 m² podłóg netto <span>·</span> 2 sypialnie <span>·</span> Dom
                 parterowy
               </p>
               <small>
@@ -164,8 +162,8 @@ export default function Home() {
             ))}
           </div>
           <p className="catalog-note">
-            Podane metraże oznaczają powierzchnię zabudowy. Wszystkie projekty
-            są koncepcyjne.
+            Podane metraże to suma podłóg netto wszystkich kondygnacji, przed korektą za skosy.
+            Wszystkie projekty są koncepcyjne i mieszczą się w 70 m².
           </p>
         </div>
       </section>
@@ -245,9 +243,9 @@ export default function Home() {
           <div>
             <span className="eyebrow">05 / ZAKRES DOPASOWANY DO CIEBIE</span>
             <h2>
-              Ty wybierasz,
+              Budujesz w swoim rytmie,
               <br />
-              <span>na jakim etapie dołączysz.</span>
+              <span>z jasnym zakresem prac.</span>
             </h2>
           </div>
           <p>
@@ -274,10 +272,42 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="quote-section" id="wycena">
+      <section className="shell inspiration-section" aria-labelledby="inspiration-title">
+        <div className="section-title">
+          <div><span className="eyebrow">06 / ZOBACZ, JAK MOŻESZ MIESZKAĆ</span><h2 id="inspiration-title">Forma spotyka <span>codzienność.</span></h2></div>
+          <p>Światło we wnętrzu. Drewno pod dłonią.<br />Ogród tuż za progiem.</p>
+        </div>
+        <div className="inspiration-grid">
+          {[
+            ["komfort-60", "living", "KOMFORT 60", "Spokojne wnętrze, blisko ogrodu."],
+            ["optima-70", "flat-front", "OPTIMA 70", "Horyzontalna forma. Nowa perspektywa."],
+            ["stodola-60", "exterior", "STODOŁA", "Wyrazista sylwetka, naturalny materiał."],
+          ].map(([slug,view,name,caption],i)=><Link key={slug} href={`/projekty/${slug}`} className={`inspiration-item inspiration-${i}`}>
+            <Image src={`/images/houses/${slug}/${view}.webp`} alt={`${name} — ${caption} Wizualizacja koncepcyjna.`} fill sizes="(max-width: 650px) 100vw, 55vw"/>
+            <div><span>{name}</span><h3>{caption}</h3><span className="text-link">Odkryj koncepcję <ArrowUpRight size={18}/></span></div>
+          </Link>)}
+        </div>
+        <p className="catalog-note">Galeria wizualizacji koncepcyjnych. To inspiracje architektoniczne; szczegóły wymagają skoordynowania z dokumentacją.</p>
+      </section>
+      <section className="shell faq-section">
+        <div className="section-title">
+          <div>
+            <span className="eyebrow">07 / DOBRZE WIEDZIEĆ</span>
+            <h2>
+              Masz pytania?
+              <br />
+              <span>Zacznij tutaj.</span>
+            </h2>
+          </div>
+          <Link href="/faq" className="text-link">
+            Wszystkie odpowiedzi <ArrowRight size={17} />
+          </Link>
+        </div>
+        <FAQ limit={5} />
+      </section>      <section className="quote-section" id="wycena">
         <div className="shell quote-grid">
           <div className="quote-copy">
-            <span className="eyebrow">06 / ZACZNIJMY OD ROZMOWY</span>
+            <span className="eyebrow">08 / ZACZNIJMY OD ROZMOWY</span>
             <h2>
               Jak wygląda
               <br />
@@ -316,22 +346,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="shell faq-section">
-        <div className="section-title">
-          <div>
-            <span className="eyebrow">07 / DOBRZE WIEDZIEĆ</span>
-            <h2>
-              Masz pytania?
-              <br />
-              <span>Zacznij tutaj.</span>
-            </h2>
-          </div>
-          <Link href="/faq" className="text-link">
-            Wszystkie odpowiedzi <ArrowRight size={17} />
-          </Link>
-        </div>
-        <FAQ limit={5} />
-      </section>
+
     </>
   );
 }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "Odkryj koncepcyjne projekty domów szkieletowych do 70 m² powierzchni zabudowy. Naturalne materiały, przemyślane wnętrza i indywidualna wycena.",
+    "Odkryj koncepcyjne projekty domów szkieletowych do 70 m² łącznej powierzchni podłóg netto. Naturalne materiały, przemyślane wnętrza i indywidualna wycena.",
   robots: site.published
     ? { index: true, follow: true }
     : { index: false, follow: false },

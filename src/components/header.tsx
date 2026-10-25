@@ -84,7 +84,7 @@ export function Header() {
           ))}
         </nav>
         <Link href="/kontakt#wycena" className="button small header-cta">
-          Zapytaj o wycenę <ArrowUpRight size={16} />
+          Bezpłatna wycena <ArrowUpRight size={16} />
         </Link>
         <button
           className="menu-toggle"
@@ -120,7 +120,7 @@ export function Header() {
             </Link>
           ))}
           <Link href="/kontakt#wycena" onClick={() => setOpen(false)}>
-            Zapytaj o wycenę <ArrowUpRight />
+            Bezpłatna wycena <ArrowUpRight />
           </Link>
         </nav>
       )}

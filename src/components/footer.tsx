@@ -34,7 +34,7 @@ export function Footer() {
               Przestrzeń dla Twojego życia.
             </p>
             <p className="fine">
-              Dane rejestrowe i kontaktowe w przygotowaniu.
+              Dane rejestrowe w przygotowaniu.
             </p>
           </div>
           <div>
@@ -57,7 +57,7 @@ export function Footer() {
             <p>
               Koncepcje do 70 m²
               <br />
-              powierzchni zabudowy.
+              podłóg netto wszystkich kondygnacji.
             </p>
             <p className="fine">{site.serviceArea}</p>
           </div>
