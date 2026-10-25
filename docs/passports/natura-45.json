@@ -1,0 +1,99 @@
+{
+  "name": "NATURA 45",
+  "slug": "natura-45",
+  "tagline": "Bliżej natury, bliżej siebie.",
+  "footprint": 45,
+  "usable": 36,
+  "width": 9,
+  "depth": 5,
+  "floors": 1,
+  "bedrooms": 2,
+  "bathrooms": 1,
+  "style": "Skandynawski",
+  "facade": "Jasne drewno świerkowe i ciemne obróbki",
+  "layout": "Salon z kuchnią, sypialnia główna, mała sypialnia gościnna lub gabinet, łazienka i komunikacja.",
+  "audience": "Dla pary potrzebującej dodatkowego pokoju.",
+  "note": "Druga sypialnia jest pokojem jednoosobowym; nie zakładamy dwóch pełnych sypialni dwuosobowych.",
+  "id": "DOM-02",
+  "roof": "Dwuspadowy",
+  "description": "NATURA 45 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 45 m². Salon z kuchnią, sypialnia główna, mała sypialnia gościnna lub gabinet, łazienka i komunikacja. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
+  "benefits": [
+    "Zwarta, czytelna bryła",
+    "Naturalne materiały elewacyjne",
+    "Wszystkie pomieszczenia na jednym poziomie",
+    "Możliwość dopasowania do działki"
+  ],
+  "published": true,
+  "image": "/images/houses/natura-45/exterior.webp",
+  "alternate": "/images/houses/natura-45/alternate.webp",
+  "plan": "/images/houses/natura-45/plan.svg",
+  "imageStatus": "concept-render",
+  "geometry": {
+    "functionalZones": {
+      "externalWall": 0.28,
+      "floors": [
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 2.09,
+            "d": 1.95,
+            "label": "Łazienka",
+            "type": "bath"
+          },
+          {
+            "x": 2.37,
+            "y": 0.28,
+            "w": 2.55,
+            "d": 1.95,
+            "label": "Kuchnia",
+            "type": "living"
+          },
+          {
+            "x": 0.28,
+            "y": 2.23,
+            "w": 4.64,
+            "d": 2.49,
+            "label": "Salon + wejście",
+            "type": "living"
+          },
+          {
+            "x": 4.92,
+            "y": 0.28,
+            "w": 0.85,
+            "d": 4.44,
+            "label": "Hol",
+            "type": "hall"
+          },
+          {
+            "x": 5.77,
+            "y": 0.28,
+            "w": 2.95,
+            "d": 2.22,
+            "label": "Pokój 1",
+            "type": "bed"
+          },
+          {
+            "x": 5.77,
+            "y": 2.5,
+            "w": 2.95,
+            "d": 2.22,
+            "label": "Pokój 2",
+            "type": "bed"
+          }
+        ]
+      ]
+    },
+    "externalEnvelope": "9 × 5 m",
+    "footprintCalculation": "9 × 5 = 45 m²",
+    "assumedExternalWall": ".28 m for feasibility envelope only",
+    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "professionalReview": false
+  },
+  "visuals": {
+    "status": "Conceptual; not evidence of an engineering review",
+    "front": "Photorealistic architectural photograph. Concept NATURA 45, external envelope 9m x 5m, single storey, gable metal standing seam roof, Jasne drewno świerkowe i ciemne obróbki. Polish meadow, daylight. Front left three quarter view. Salon z kuchnią, sypialnia główna, mała sypialnia gościnna lub gabinet, łazienka i komunikacja. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same NATURA 45 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
+    "plan": "Top down schematic floor plan for NATURA 45, 9 x 5m external footprint, 1 levels. Salon z kuchnią, sypialnia główna, mała sypialnia gościnna lub gabinet, łazienka i komunikacja. Druga sypialnia jest pokojem jednoosobowym; nie zakładamy dwóch pełnych sypialni dwuosobowych. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
+  }
+}

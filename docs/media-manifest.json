@@ -1,0 +1,246 @@
+{
+  "status": "Conceptual; architectural review required",
+  "count": 30,
+  "items": [
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "e5147426dd8b9c77078c1dbee4c589285411a3372ed2306dab5972b982d5c851",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "8ed8180a54ca8cccde6da603ce66cba66519952e802cdf646bf845d022a05266",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "84b8922f77363f5016ebf3ef5b358902f71a9553a3a8f50268032664116eafbc",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "363c77b9c3af5006611591888ff7dcded44dd6f363f89dbbcd08d59b83770a29",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "4005fc9073f401ae0dcb86b5d5af67bfdb5bf976c0a8f370eaf9a8c5cde32976",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "2611acfb01ae87dfe12770ac0265a323391398f856b9ebe64d2044460fcc3326",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "555cab3e38c38eb368f9f19ca82dd0b44770b5437f6434b8f623aa47222f8b0e",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "34a4712ad388d23fbd3157f626b88c0e97c4c12de7a0f9884c07f89b9977aa92",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "0410ea66eefad533c254e76ba49aef2234c36a7061858b5b5514f62c218fdf16",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "6111e4124a2831fdc685819deb71bb0c1f60507e99d8d76d3beeabea6f482cfa",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "6c5e34f3f29ffe44c1811d645cfc0fe6e229444b66e5441cb485e4f947cf9dab",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "f29015afa04a16772abf82991314b784bbfcb35818ba929a262be0131ad9dd66",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "d0864ad999893edaa955a4023389b10409d457f1903561ddf8640b64312bc43f",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "323c61ad59b429c9a847705c2f194c32658a197f69273b17b8e7b14c7320da76",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "d64c155c0cb16d9ccfe8c381faba58ae7c1baf3aa2dee8748d3d6fb39411f426",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "614d3203920c5689222124ee1f240e4047bb58a1f9efa0dfbb22948af07da14d",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "ff7fd94128bb2be8197b6cc8a3c930f2014ffdc8b3c9605bea898aaf9345cba4",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "0df803c1bbc1e4959907e6b3c9733278ddf98589cc961383cefd0423b46f1680",
+      "architectApproved": false
+    },
+    {
+      "project": "optima-70",
+      "file": "public/images/houses/optima-70/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "f5de1568c58c616ac8abb0f28ab59474d5be1a028fb860e4bc458dbf28ded5f8",
+      "architectApproved": false
+    },
+    {
+      "project": "optima-70",
+      "file": "public/images/houses/optima-70/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "ad013c93f4dcf6bf2cd60fd136a5850320204b26f5b4fe5c70c1cc2a2baebec9",
+      "architectApproved": false
+    },
+    {
+      "project": "optima-70",
+      "file": "public/images/houses/optima-70/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "a6cf9c13c39f2fded782ef79ce2c29796cc5d7d6d457b155fc961f08f0cca757",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "901318fb13eb53f526fd8fa9be772abce1f4d13b984887a7ed13894638663a61",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "c7f30912a5d804bf6cd6e12a6e7cb1173fecc9a955ea50ebd0d36890da6f18f3",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "a2e43facf78b879535f3cbfd50692f42bbe362569c47e2db4f885b5539e3c65b",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "0c6a8db9f3e366a76af692c9384142603a6f3af5c6c9bbac3c2afb8b4552b330",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "fa5f05b912e18de4072a4139ab4a756090ebdc0bc80aa392eceaccc351e0f2c8",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "cebb111f79a24e5e1149e5be997d0b0d8681f9062914798c523c572d42a5829e",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/exterior.webp",
+      "role": "front",
+      "source": "Original AI concept visualization",
+      "sha256": "f94492a841d11194bbb6a91c99aa9c73844ab585c3fd5c3f09c9487cca8de752",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/alternate.webp",
+      "role": "second-angle",
+      "source": "Original AI concept visualization",
+      "sha256": "a8032d0da1186eb912482e2a5cadeab051f742ab6f21fd2c473b25a92cc20b3f",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/plan.svg",
+      "role": "functional-zones",
+      "source": "Original parametric SVG",
+      "sha256": "92c4042e62344a4c92724c958bc22f309f5e47d1b347b55eac788f7608d64e22",
+      "architectApproved": false
+    }
+  ]
+}

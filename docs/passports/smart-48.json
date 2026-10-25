@@ -1,0 +1,109 @@
+{
+  "name": "SMART 48",
+  "slug": "smart-48",
+  "tagline": "Więcej możliwości na małej działce.",
+  "footprint": 48,
+  "usable": 61,
+  "width": 8,
+  "depth": 6,
+  "floors": 2,
+  "bedrooms": 2,
+  "bathrooms": 1,
+  "style": "Minimalistyczny",
+  "facade": "Pionowa deska i antracytowe detale",
+  "layout": "Parter: salon, kuchnia, łazienka i schody. Poddasze: dwie sypialnie i komunikacja.",
+  "audience": "Dla pary lub małej rodziny, która chce oddzielić strefę nocną.",
+  "note": "Orientacyjna powierzchnia użytkowa poddasza uwzględnia skosy; wysokości i schody wymagają projektu.",
+  "id": "DOM-07",
+  "roof": "Dwuspadowy",
+  "description": "SMART 48 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 48 m². Parter: salon, kuchnia, łazienka i schody. Poddasze: dwie sypialnie i komunikacja. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
+  "benefits": [
+    "Zwarta, czytelna bryła",
+    "Naturalne materiały elewacyjne",
+    "Oddzielona strefa dzienna i nocna",
+    "Możliwość dopasowania do działki"
+  ],
+  "published": true,
+  "image": "/images/houses/smart-48/exterior.webp",
+  "alternate": "/images/houses/smart-48/alternate.webp",
+  "plan": "/images/houses/smart-48/plan.svg",
+  "imageStatus": "concept-render",
+  "geometry": {
+    "functionalZones": {
+      "externalWall": 0.28,
+      "floors": [
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 4.76,
+            "d": 5.44,
+            "label": "Salon + kuchnia",
+            "type": "living"
+          },
+          {
+            "x": 5.04,
+            "y": 0.28,
+            "w": 2.68,
+            "d": 2.01,
+            "label": "Jadalnia",
+            "type": "living"
+          },
+          {
+            "x": 5.04,
+            "y": 2.29,
+            "w": 2.68,
+            "d": 1.52,
+            "label": "Łazienka",
+            "type": "bath"
+          },
+          {
+            "x": 5.04,
+            "y": 3.82,
+            "w": 2.68,
+            "d": 1.9,
+            "label": "Schody / wejście",
+            "type": "stairs"
+          }
+        ],
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 3.72,
+            "d": 4.49,
+            "label": "Pokój 1 / skosy",
+            "type": "bed"
+          },
+          {
+            "x": 4,
+            "y": 0.28,
+            "w": 3.72,
+            "d": 4.49,
+            "label": "Pokój 2 / skosy",
+            "type": "bed"
+          },
+          {
+            "x": 0.28,
+            "y": 4.77,
+            "w": 7.44,
+            "d": 0.95,
+            "label": "Hol / otwór schodowy",
+            "type": "stairs"
+          }
+        ]
+      ]
+    },
+    "externalEnvelope": "8 × 6 m",
+    "footprintCalculation": "8 × 6 = 48 m²",
+    "assumedExternalWall": ".28 m for feasibility envelope only",
+    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "professionalReview": false
+  },
+  "visuals": {
+    "status": "Conceptual; not evidence of an engineering review",
+    "front": "Photorealistic architectural photograph. Concept SMART 48, external envelope 8m x 6m, ground floor and habitable attic, gable metal standing seam roof, Pionowa deska i antracytowe detale. Polish meadow, daylight. Front left three quarter view. Parter: salon, kuchnia, łazienka i schody. Poddasze: dwie sypialnie i komunikacja. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same SMART 48 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
+    "plan": "Top down schematic floor plan for SMART 48, 8 x 6m external footprint, 2 levels. Parter: salon, kuchnia, łazienka i schody. Poddasze: dwie sypialnie i komunikacja. Orientacyjna powierzchnia użytkowa poddasza uwzględnia skosy; wysokości i schody wymagają projektu. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
+  }
+}

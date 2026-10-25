@@ -1,0 +1,99 @@
+{
+  "name": "RODZINNY 65",
+  "slug": "rodzinny-65",
+  "tagline": "Każdy ma swój kawałek domu.",
+  "footprint": 65,
+  "usable": 55,
+  "width": 10,
+  "depth": 6.5,
+  "floors": 1,
+  "bedrooms": 3,
+  "bathrooms": 1,
+  "style": "Skandynawski",
+  "facade": "Deska naturalna z fragmentami jasnej okładziny",
+  "layout": "Trzy niewielkie sypialnie w tylnej części, wspólna strefa dzienna z aneksem, łazienka oraz krótki korytarz.",
+  "audience": "Dla rodziny preferującej mniejsze pokoje i wspólny salon.",
+  "note": "Dwie sypialnie dziecięce zakładają łóżka pojedyncze; dla większych pokoi polecamy wariant dwusypialniany.",
+  "id": "DOM-05",
+  "roof": "Dwuspadowy",
+  "description": "RODZINNY 65 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 65 m². Trzy niewielkie sypialnie w tylnej części, wspólna strefa dzienna z aneksem, łazienka oraz krótki korytarz. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
+  "benefits": [
+    "Zwarta, czytelna bryła",
+    "Naturalne materiały elewacyjne",
+    "Wszystkie pomieszczenia na jednym poziomie",
+    "Możliwość dopasowania do działki"
+  ],
+  "published": true,
+  "image": "/images/houses/rodzinny-65/exterior.webp",
+  "alternate": "/images/houses/rodzinny-65/alternate.webp",
+  "plan": "/images/houses/rodzinny-65/plan.svg",
+  "imageStatus": "concept-render",
+  "geometry": {
+    "functionalZones": {
+      "externalWall": 0.28,
+      "floors": [
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 3.15,
+            "d": 2.65,
+            "label": "Pokój 1",
+            "type": "bed"
+          },
+          {
+            "x": 3.43,
+            "y": 0.28,
+            "w": 3.15,
+            "d": 2.65,
+            "label": "Pokój 2",
+            "type": "bed"
+          },
+          {
+            "x": 6.57,
+            "y": 0.28,
+            "w": 3.15,
+            "d": 2.65,
+            "label": "Pokój 3",
+            "type": "bed"
+          },
+          {
+            "x": 0.28,
+            "y": 2.93,
+            "w": 9.44,
+            "d": 0.85,
+            "label": "Komunikacja",
+            "type": "hall"
+          },
+          {
+            "x": 0.28,
+            "y": 3.78,
+            "w": 7.19,
+            "d": 2.44,
+            "label": "Salon + aneks",
+            "type": "living"
+          },
+          {
+            "x": 7.47,
+            "y": 3.78,
+            "w": 2.25,
+            "d": 2.44,
+            "label": "Łaz. / wejście*",
+            "type": "bath"
+          }
+        ]
+      ]
+    },
+    "externalEnvelope": "10 × 6.5 m",
+    "footprintCalculation": "10 × 6.5 = 65 m²",
+    "assumedExternalWall": ".28 m for feasibility envelope only",
+    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "professionalReview": false
+  },
+  "visuals": {
+    "status": "Conceptual; not evidence of an engineering review",
+    "front": "Photorealistic architectural photograph. Concept RODZINNY 65, external envelope 10m x 6.5m, single storey, gable metal standing seam roof, Deska naturalna z fragmentami jasnej okładziny. Polish meadow, daylight. Front left three quarter view. Trzy niewielkie sypialnie w tylnej części, wspólna strefa dzienna z aneksem, łazienka oraz krótki korytarz. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same RODZINNY 65 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
+    "plan": "Top down schematic floor plan for RODZINNY 65, 10 x 6.5m external footprint, 1 levels. Trzy niewielkie sypialnie w tylnej części, wspólna strefa dzienna z aneksem, łazienka oraz krótki korytarz. Dwie sypialnie dziecięce zakładają łóżka pojedyncze; dla większych pokoi polecamy wariant dwusypialniany. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "MINI 35",
+  "slug": "mini-35",
+  "tagline": "Mały dom. Wielka swoboda.",
+  "footprint": 35,
+  "usable": 27,
+  "width": 7,
+  "depth": 5,
+  "floors": 1,
+  "bedrooms": 1,
+  "bathrooms": 1,
+  "style": "Minimalistyczny",
+  "facade": "Pionowa deska modrzewiowa i grafitowa stolarka",
+  "layout": "Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę.",
+  "audience": "Dla jednej osoby lub pary, która ceni prostotę.",
+  "note": "Sypialnia jest kompaktowa; miejsce do pracy przewidziano w strefie dziennej.",
+  "id": "DOM-01",
+  "roof": "Dwuspadowy",
+  "description": "MINI 35 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 35 m². Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
+  "benefits": [
+    "Zwarta, czytelna bryła",
+    "Naturalne materiały elewacyjne",
+    "Wszystkie pomieszczenia na jednym poziomie",
+    "Możliwość dopasowania do działki"
+  ],
+  "published": true,
+  "image": "/images/houses/mini-35/exterior.webp",
+  "alternate": "/images/houses/mini-35/alternate.webp",
+  "plan": "/images/houses/mini-35/plan.svg",
+  "imageStatus": "concept-render",
+  "geometry": {
+    "functionalZones": {
+      "externalWall": 0.28,
+      "floors": [
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 3.93,
+            "d": 4.44,
+            "label": "Salon + aneks",
+            "type": "living"
+          },
+          {
+            "x": 4.21,
+            "y": 0.28,
+            "w": 2.51,
+            "d": 1.6,
+            "label": "Łazienka",
+            "type": "bath"
+          },
+          {
+            "x": 4.21,
+            "y": 1.88,
+            "w": 2.51,
+            "d": 2.84,
+            "label": "Sypialnia",
+            "type": "bed"
+          }
+        ]
+      ]
+    },
+    "externalEnvelope": "7 × 5 m",
+    "footprintCalculation": "7 × 5 = 35 m²",
+    "assumedExternalWall": ".28 m for feasibility envelope only",
+    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "professionalReview": false
+  },
+  "visuals": {
+    "status": "Conceptual; not evidence of an engineering review",
+    "front": "Photorealistic architectural photograph. Concept MINI 35, external envelope 7m x 5m, single storey, gable metal standing seam roof, Pionowa deska modrzewiowa i grafitowa stolarka. Polish meadow, daylight. Front left three quarter view. Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same MINI 35 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
+    "plan": "Top down schematic floor plan for MINI 35, 7 x 5m external footprint, 1 levels. Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. Sypialnia jest kompaktowa; miejsce do pracy przewidziano w strefie dziennej. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
+  }
+}

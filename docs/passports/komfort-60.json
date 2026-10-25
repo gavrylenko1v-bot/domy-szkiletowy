@@ -1,0 +1,99 @@
+{
+  "name": "KOMFORT 60",
+  "slug": "komfort-60",
+  "tagline": "Codzienność w dobrym rytmie.",
+  "footprint": 60,
+  "usable": 50,
+  "width": 10,
+  "depth": 6,
+  "floors": 1,
+  "bedrooms": 2,
+  "bathrooms": 1,
+  "style": "Skandynawski",
+  "facade": "Pionowy modrzew naturalny, grafitowa stolarka i dach na rąbek",
+  "layout": "Salon z jadalnią otwarty na ogród, aneks kuchenny, dwie sypialnie, łazienka i wejście z szafą.",
+  "audience": "Dla pary lub rodziny z jednym dzieckiem.",
+  "note": "Taras jest elementem opcjonalnym, nieuwzględnionym w podanej powierzchni zabudowy.",
+  "id": "DOM-04",
+  "roof": "Dwuspadowy",
+  "description": "KOMFORT 60 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 60 m². Salon z jadalnią otwarty na ogród, aneks kuchenny, dwie sypialnie, łazienka i wejście z szafą. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
+  "benefits": [
+    "Zwarta, czytelna bryła",
+    "Naturalne materiały elewacyjne",
+    "Wszystkie pomieszczenia na jednym poziomie",
+    "Możliwość dopasowania do działki"
+  ],
+  "published": true,
+  "image": "/images/houses/komfort-60/exterior.webp",
+  "alternate": "/images/houses/komfort-60/alternate.webp",
+  "plan": "/images/houses/komfort-60/plan.svg",
+  "imageStatus": "concept-render",
+  "geometry": {
+    "functionalZones": {
+      "externalWall": 0.28,
+      "floors": [
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 2.38,
+            "d": 1.95,
+            "label": "Łazienka",
+            "type": "bath"
+          },
+          {
+            "x": 2.66,
+            "y": 0.28,
+            "w": 2.91,
+            "d": 1.95,
+            "label": "Kuchnia",
+            "type": "living"
+          },
+          {
+            "x": 0.28,
+            "y": 2.23,
+            "w": 5.29,
+            "d": 3.49,
+            "label": "Salon + wejście",
+            "type": "living"
+          },
+          {
+            "x": 5.57,
+            "y": 0.28,
+            "w": 0.85,
+            "d": 5.44,
+            "label": "Hol",
+            "type": "hall"
+          },
+          {
+            "x": 6.42,
+            "y": 0.28,
+            "w": 3.3,
+            "d": 2.72,
+            "label": "Pokój 1",
+            "type": "bed"
+          },
+          {
+            "x": 6.42,
+            "y": 3,
+            "w": 3.3,
+            "d": 2.72,
+            "label": "Pokój 2",
+            "type": "bed"
+          }
+        ]
+      ]
+    },
+    "externalEnvelope": "10 × 6 m",
+    "footprintCalculation": "10 × 6 = 60 m²",
+    "assumedExternalWall": ".28 m for feasibility envelope only",
+    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "professionalReview": false
+  },
+  "visuals": {
+    "status": "Conceptual; not evidence of an engineering review",
+    "front": "Photorealistic architectural photograph. Concept KOMFORT 60, external envelope 10m x 6m, single storey, gable metal standing seam roof, Pionowy modrzew naturalny, grafitowa stolarka i dach na rąbek. Polish meadow, daylight. Front left three quarter view. Salon z jadalnią otwarty na ogród, aneks kuchenny, dwie sypialnie, łazienka i wejście z szafą. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same KOMFORT 60 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
+    "plan": "Top down schematic floor plan for KOMFORT 60, 10 x 6m external footprint, 1 levels. Salon z jadalnią otwarty na ogród, aneks kuchenny, dwie sypialnie, łazienka i wejście z szafą. Taras jest elementem opcjonalnym, nieuwzględnionym w podanej powierzchni zabudowy. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
+  }
+}

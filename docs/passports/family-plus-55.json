@@ -1,0 +1,117 @@
+{
+  "name": "FAMILY PLUS 55",
+  "slug": "family-plus-55",
+  "tagline": "Miejsce na kolejny rozdział.",
+  "footprint": 55,
+  "usable": 72,
+  "width": 10,
+  "depth": 5.5,
+  "floors": 2,
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "style": "Skandynawski",
+  "facade": "Modrzew naturalny i grafitowa blacha",
+  "layout": "Parter: pokój do pracy lub sypialnia, salon z kuchnią, łazienka i schody. Poddasze: dwie sypialnie oraz mała łazienka.",
+  "audience": "Dla rodziny szukającej elastycznego układu.",
+  "note": "Pokój na parterze jest kompaktowy. Dwie łazienki zakładają wspólny pion instalacyjny.",
+  "id": "DOM-08",
+  "roof": "Dwuspadowy",
+  "description": "FAMILY PLUS 55 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 55 m². Parter: pokój do pracy lub sypialnia, salon z kuchnią, łazienka i schody. Poddasze: dwie sypialnie oraz mała łazienka. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
+  "benefits": [
+    "Zwarta, czytelna bryła",
+    "Naturalne materiały elewacyjne",
+    "Oddzielona strefa dzienna i nocna",
+    "Możliwość dopasowania do działki"
+  ],
+  "published": true,
+  "image": "/images/houses/family-plus-55/exterior.webp",
+  "alternate": "/images/houses/family-plus-55/alternate.webp",
+  "plan": "/images/houses/family-plus-55/plan.svg",
+  "imageStatus": "concept-render",
+  "geometry": {
+    "functionalZones": {
+      "externalWall": 0.28,
+      "floors": [
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 6.04,
+            "d": 4.94,
+            "label": "Salon + kuchnia",
+            "type": "living"
+          },
+          {
+            "x": 6.32,
+            "y": 0.28,
+            "w": 3.4,
+            "d": 1.83,
+            "label": "Pokój / gabinet",
+            "type": "bed"
+          },
+          {
+            "x": 6.32,
+            "y": 2.11,
+            "w": 3.4,
+            "d": 1.38,
+            "label": "Łazienka",
+            "type": "bath"
+          },
+          {
+            "x": 6.32,
+            "y": 3.49,
+            "w": 3.4,
+            "d": 1.73,
+            "label": "Schody / wejście",
+            "type": "stairs"
+          }
+        ],
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 4.72,
+            "d": 3.34,
+            "label": "Pokój 1 / skosy",
+            "type": "bed"
+          },
+          {
+            "x": 5,
+            "y": 0.28,
+            "w": 4.72,
+            "d": 3.34,
+            "label": "Pokój 2 / skosy",
+            "type": "bed"
+          },
+          {
+            "x": 0.28,
+            "y": 3.62,
+            "w": 6.61,
+            "d": 1.6,
+            "label": "Hol / schody",
+            "type": "stairs"
+          },
+          {
+            "x": 6.89,
+            "y": 3.62,
+            "w": 2.83,
+            "d": 1.6,
+            "label": "Łazienka",
+            "type": "bath"
+          }
+        ]
+      ]
+    },
+    "externalEnvelope": "10 × 5.5 m",
+    "footprintCalculation": "10 × 5.5 = 55 m²",
+    "assumedExternalWall": ".28 m for feasibility envelope only",
+    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "professionalReview": false
+  },
+  "visuals": {
+    "status": "Conceptual; not evidence of an engineering review",
+    "front": "Photorealistic architectural photograph. Concept FAMILY PLUS 55, external envelope 10m x 5.5m, ground floor and habitable attic, gable metal standing seam roof, Modrzew naturalny i grafitowa blacha. Polish meadow, daylight. Front left three quarter view. Parter: pokój do pracy lub sypialnia, salon z kuchnią, łazienka i schody. Poddasze: dwie sypialnie oraz mała łazienka. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same FAMILY PLUS 55 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
+    "plan": "Top down schematic floor plan for FAMILY PLUS 55, 10 x 5.5m external footprint, 2 levels. Parter: pokój do pracy lub sypialnia, salon z kuchnią, łazienka i schody. Poddasze: dwie sypialnie oraz mała łazienka. Pokój na parterze jest kompaktowy. Dwie łazienki zakładają wspólny pion instalacyjny. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
+  }
+}

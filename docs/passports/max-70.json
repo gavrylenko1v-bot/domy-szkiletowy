@@ -1,0 +1,133 @@
+{
+  "name": "MAX 70",
+  "slug": "max-70",
+  "tagline": "Dom, który mieści Twoje plany.",
+  "footprint": 70,
+  "usable": 94,
+  "width": 10,
+  "depth": 7,
+  "floors": 2,
+  "bedrooms": 4,
+  "bathrooms": 2,
+  "style": "Nowoczesna stodoła",
+  "facade": "Naturalne drewno, grafitowa blacha i ciemna stolarka",
+  "layout": "Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: trzy pokoje, łazienka i hol.",
+  "audience": "Dla większej rodziny lub osób potrzebujących gabinetu.",
+  "note": "Wariant 3–4 sypialni: czwarty pokój można przeznaczyć na gabinet. Poddasze wymaga sprawdzenia wysokości pod skosami.",
+  "id": "DOM-10",
+  "roof": "Dwuspadowy",
+  "description": "MAX 70 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 70 m². Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: trzy pokoje, łazienka i hol. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
+  "benefits": [
+    "Zwarta, czytelna bryła",
+    "Naturalne materiały elewacyjne",
+    "Oddzielona strefa dzienna i nocna",
+    "Możliwość dopasowania do działki"
+  ],
+  "published": true,
+  "image": "/images/houses/max-70/exterior.webp",
+  "alternate": "/images/houses/max-70/alternate.webp",
+  "plan": "/images/houses/max-70/plan.svg",
+  "imageStatus": "concept-render",
+  "geometry": {
+    "functionalZones": {
+      "externalWall": 0.28,
+      "floors": [
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 6.04,
+            "d": 6.44,
+            "label": "Salon + kuchnia",
+            "type": "living"
+          },
+          {
+            "x": 6.32,
+            "y": 0.28,
+            "w": 3.4,
+            "d": 2.38,
+            "label": "Pokój / gabinet",
+            "type": "bed"
+          },
+          {
+            "x": 6.32,
+            "y": 2.66,
+            "w": 3.4,
+            "d": 1.8,
+            "label": "Łazienka",
+            "type": "bath"
+          },
+          {
+            "x": 6.32,
+            "y": 4.47,
+            "w": 3.4,
+            "d": 2.25,
+            "label": "Schody / wejście",
+            "type": "stairs"
+          }
+        ],
+        [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 4.72,
+            "d": 2.42,
+            "label": "Pokój 1 / skosy",
+            "type": "bed"
+          },
+          {
+            "x": 5,
+            "y": 0.28,
+            "w": 4.72,
+            "d": 2.42,
+            "label": "Pokój 2 / skosy",
+            "type": "bed"
+          },
+          {
+            "x": 0.28,
+            "y": 2.7,
+            "w": 9.44,
+            "d": 1.6,
+            "label": "Hol",
+            "type": "hall"
+          },
+          {
+            "x": 0.28,
+            "y": 4.3,
+            "w": 4.53,
+            "d": 2.42,
+            "label": "Pokój 3 / skosy",
+            "type": "bed"
+          },
+          {
+            "x": 4.81,
+            "y": 4.3,
+            "w": 2.08,
+            "d": 2.42,
+            "label": "Łazienka",
+            "type": "bath"
+          },
+          {
+            "x": 6.89,
+            "y": 4.3,
+            "w": 2.83,
+            "d": 2.42,
+            "label": "Schody",
+            "type": "stairs"
+          }
+        ]
+      ]
+    },
+    "externalEnvelope": "10 × 7 m",
+    "footprintCalculation": "10 × 7 = 70 m²",
+    "assumedExternalWall": ".28 m for feasibility envelope only",
+    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "professionalReview": false
+  },
+  "visuals": {
+    "status": "Conceptual; not evidence of an engineering review",
+    "front": "Photorealistic architectural photograph. Concept MAX 70, external envelope 10m x 7m, ground floor and habitable attic, gable metal standing seam roof, Naturalne drewno, grafitowa blacha i ciemna stolarka. Polish meadow, daylight. Front left three quarter view. Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: trzy pokoje, łazienka i hol. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same MAX 70 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
+    "plan": "Top down schematic floor plan for MAX 70, 10 x 7m external footprint, 2 levels. Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: trzy pokoje, łazienka i hol. Wariant 3–4 sypialni: czwarty pokój można przeznaczyć na gabinet. Poddasze wymaga sprawdzenia wysokości pod skosami. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
+  }
+}
