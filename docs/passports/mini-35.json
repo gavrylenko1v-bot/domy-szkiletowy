@@ -28,6 +28,56 @@
   "alternate": "/images/houses/mini-35/alternate.webp",
   "plan": "/images/houses/mini-35/plan.svg",
   "imageStatus": "concept-render",
+  "preliminaryProgram": {
+    "rooms": [
+      {
+        "name": "Salon z aneksem kuchennym",
+        "area": 15,
+        "level": 0
+      },
+      {
+        "name": "Sypialnia",
+        "area": 7,
+        "level": 0
+      },
+      {
+        "name": "Łazienka",
+        "area": 3,
+        "level": 0
+      },
+      {
+        "name": "Wejście i przechowywanie",
+        "area": 2,
+        "level": 0
+      }
+    ],
+    "gross": 35,
+    "roomCount": 2,
+    "structure": "Szkielet drewniany; przekroje, usztywnienia i układ warstw dobiera konstruktor.",
+    "roofPitch": "35° — założenie koncepcyjne",
+    "terrace": "Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
+    "glazing": "Większe przeszklenie przy salonie; oddzielne okna w sypialniach. Ochronę przed przegrzewaniem i widoki należy sprawdzić na działce.",
+    "changes": [
+      "Odbicie układu po sprawdzeniu nasłonecznienia i dostępu do drogi.",
+      "Zmiana zabudowy kuchennej i szaf bez powiększania obrysu.",
+      "Dobór tarasu, osłon przeciwsłonecznych i materiału elewacji.",
+      "Dobór ogrzewania, wentylacji i miejsca na urządzenia przez projektanta instalacji."
+    ],
+    "finishes": [
+      [
+        "Naturalne drewno",
+        "Pionowa deska modrzewiowa i grafitowa stolarka. Sposób zabezpieczenia i konserwacji do ustalenia."
+      ],
+      [
+        "Drewno i jasna okładzina",
+        "Jaśniejszy charakter bryły; system elewacji i detale połączeń wymagają doboru projektowego."
+      ],
+      [
+        "Grafitowe akcenty",
+        "Ciemna stolarka i obróbki. Dostępność kolorów oraz wpływ na nagrzewanie do sprawdzenia."
+      ]
+    ]
+  },
   "geometry": {
     "functionalZones": {
       "externalWall": 0.28,
@@ -67,6 +117,27 @@
     "professionalReview": false
   },
   "visuals": {
+    "galleryFiles": [
+      "/images/houses/mini-35/exterior.webp",
+      "/images/houses/mini-35/alternate.webp",
+      "/images/houses/mini-35/garden.webp",
+      "/images/houses/mini-35/terrace.webp",
+      "/images/houses/mini-35/side.webp",
+      "/images/houses/mini-35/aerial.webp",
+      "/images/houses/mini-35/living.webp",
+      "/images/houses/mini-35/kitchen.webp",
+      "/images/houses/mini-35/bedroom.webp"
+    ],
+    "coordinationStatus": "Provisional AI concepts. Visual screening performed; geometry, dimensions, openings and room schedules still need coordinated architectural review. Not a CAD-derived image set.",
+    "additionalViewPrompts": {
+      "garden": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "terrace": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "side": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "aerial": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "living": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "kitchen": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "bedroom": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
+    },
     "status": "Conceptual; not evidence of an engineering review",
     "front": "Photorealistic architectural photograph. Concept MINI 35, external envelope 7m x 5m, single storey, gable metal standing seam roof, Pionowa deska modrzewiowa i grafitowa stolarka. Polish meadow, daylight. Front left three quarter view. Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
     "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same MINI 35 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",

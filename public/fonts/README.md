@@ -1,0 +1,1 @@
+Self-hosted variable WOFF2 fonts: Inter and Manrope, Fontsource packages version 5.3.0. Latin and Latin Extended subsets cover Polish. Distributed under the accompanying SIL Open Font License files. No runtime font provider requests.

@@ -28,6 +28,61 @@
   "alternate": "/images/houses/natura-45/alternate.webp",
   "plan": "/images/houses/natura-45/plan.svg",
   "imageStatus": "concept-render",
+  "preliminaryProgram": {
+    "rooms": [
+      {
+        "name": "Salon z aneksem kuchennym",
+        "area": 16,
+        "level": 0
+      },
+      {
+        "name": "Sypialnia",
+        "area": 8,
+        "level": 0
+      },
+      {
+        "name": "Pokój jednoosobowy / gabinet",
+        "area": 6,
+        "level": 0
+      },
+      {
+        "name": "Łazienka",
+        "area": 3.5,
+        "level": 0
+      },
+      {
+        "name": "Hol z szafą",
+        "area": 2.5,
+        "level": 0
+      }
+    ],
+    "gross": 45,
+    "roomCount": 3,
+    "structure": "Szkielet drewniany; przekroje, usztywnienia i układ warstw dobiera konstruktor.",
+    "roofPitch": "35° — założenie koncepcyjne",
+    "terrace": "Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
+    "glazing": "Większe przeszklenie przy salonie; oddzielne okna w sypialniach. Ochronę przed przegrzewaniem i widoki należy sprawdzić na działce.",
+    "changes": [
+      "Odbicie układu po sprawdzeniu nasłonecznienia i dostępu do drogi.",
+      "Połączenie jednego z mniejszych pokoi ze strefą dzienną lub urządzenie gabinetu.",
+      "Dobór tarasu, osłon przeciwsłonecznych i materiału elewacji.",
+      "Dobór ogrzewania, wentylacji i miejsca na urządzenia przez projektanta instalacji."
+    ],
+    "finishes": [
+      [
+        "Naturalne drewno",
+        "Jasne drewno świerkowe i ciemne obróbki. Sposób zabezpieczenia i konserwacji do ustalenia."
+      ],
+      [
+        "Drewno i jasna okładzina",
+        "Jaśniejszy charakter bryły; system elewacji i detale połączeń wymagają doboru projektowego."
+      ],
+      [
+        "Grafitowe akcenty",
+        "Ciemna stolarka i obróbki. Dostępność kolorów oraz wpływ na nagrzewanie do sprawdzenia."
+      ]
+    ]
+  },
   "geometry": {
     "functionalZones": {
       "externalWall": 0.28,
@@ -91,6 +146,27 @@
     "professionalReview": false
   },
   "visuals": {
+    "galleryFiles": [
+      "/images/houses/natura-45/exterior.webp",
+      "/images/houses/natura-45/alternate.webp",
+      "/images/houses/natura-45/garden.webp",
+      "/images/houses/natura-45/terrace.webp",
+      "/images/houses/natura-45/side.webp",
+      "/images/houses/natura-45/aerial.webp",
+      "/images/houses/natura-45/living.webp",
+      "/images/houses/natura-45/kitchen.webp",
+      "/images/houses/natura-45/bedroom.webp"
+    ],
+    "coordinationStatus": "Provisional AI concepts. Visual screening performed; geometry, dimensions, openings and room schedules still need coordinated architectural review. Not a CAD-derived image set.",
+    "additionalViewPrompts": {
+      "garden": "Use public/images/houses/natura-45/exterior.webp as the mandatory identity reference. Same NATURA 45, 9 × 5 m, 1 storeys, Dwuspadowy, Jasne drewno świerkowe i ciemne obróbki. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "terrace": "Use public/images/houses/natura-45/exterior.webp as the mandatory identity reference. Same NATURA 45, 9 × 5 m, 1 storeys, Dwuspadowy, Jasne drewno świerkowe i ciemne obróbki. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "side": "Use public/images/houses/natura-45/exterior.webp as the mandatory identity reference. Same NATURA 45, 9 × 5 m, 1 storeys, Dwuspadowy, Jasne drewno świerkowe i ciemne obróbki. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "aerial": "Use public/images/houses/natura-45/exterior.webp as the mandatory identity reference. Same NATURA 45, 9 × 5 m, 1 storeys, Dwuspadowy, Jasne drewno świerkowe i ciemne obróbki. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "living": "Use public/images/houses/natura-45/exterior.webp as the mandatory identity reference. Same NATURA 45, 9 × 5 m, 1 storeys, Dwuspadowy, Jasne drewno świerkowe i ciemne obróbki. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "kitchen": "Use public/images/houses/natura-45/exterior.webp as the mandatory identity reference. Same NATURA 45, 9 × 5 m, 1 storeys, Dwuspadowy, Jasne drewno świerkowe i ciemne obróbki. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "bedroom": "Use public/images/houses/natura-45/exterior.webp as the mandatory identity reference. Same NATURA 45, 9 × 5 m, 1 storeys, Dwuspadowy, Jasne drewno świerkowe i ciemne obróbki. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
+    },
     "status": "Conceptual; not evidence of an engineering review",
     "front": "Photorealistic architectural photograph. Concept NATURA 45, external envelope 9m x 5m, single storey, gable metal standing seam roof, Jasne drewno świerkowe i ciemne obróbki. Polish meadow, daylight. Front left three quarter view. Salon z kuchnią, sypialnia główna, mała sypialnia gościnna lub gabinet, łazienka i komunikacja. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
     "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same NATURA 45 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",

@@ -28,6 +28,66 @@
   "alternate": "/images/houses/classic-55/alternate.webp",
   "plan": "/images/houses/classic-55/plan.svg",
   "imageStatus": "concept-render",
+  "preliminaryProgram": {
+    "rooms": [
+      {
+        "name": "Salon z kuchnią i jadalnią",
+        "area": 20,
+        "level": 0
+      },
+      {
+        "name": "Sypialnia",
+        "area": 10,
+        "level": 0
+      },
+      {
+        "name": "Pokój jednoosobowy",
+        "area": 7,
+        "level": 0
+      },
+      {
+        "name": "Łazienka",
+        "area": 4,
+        "level": 0
+      },
+      {
+        "name": "Wejście i komunikacja",
+        "area": 3,
+        "level": 0
+      },
+      {
+        "name": "Szafa instalacyjna",
+        "area": 1,
+        "level": 0
+      }
+    ],
+    "gross": 55,
+    "roomCount": 3,
+    "structure": "Szkielet drewniany; przekroje, usztywnienia i układ warstw dobiera konstruktor.",
+    "roofPitch": "35° — założenie koncepcyjne",
+    "terrace": "Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
+    "glazing": "Większe przeszklenie przy salonie; oddzielne okna w sypialniach. Ochronę przed przegrzewaniem i widoki należy sprawdzić na działce.",
+    "changes": [
+      "Odbicie układu po sprawdzeniu nasłonecznienia i dostępu do drogi.",
+      "Połączenie jednego z mniejszych pokoi ze strefą dzienną lub urządzenie gabinetu.",
+      "Dobór tarasu, osłon przeciwsłonecznych i materiału elewacji.",
+      "Dobór ogrzewania, wentylacji i miejsca na urządzenia przez projektanta instalacji."
+    ],
+    "finishes": [
+      [
+        "Naturalne drewno",
+        "Naturalny modrzew i jasny tynk na wybranych fragmentach. Sposób zabezpieczenia i konserwacji do ustalenia."
+      ],
+      [
+        "Drewno i jasna okładzina",
+        "Jaśniejszy charakter bryły; system elewacji i detale połączeń wymagają doboru projektowego."
+      ],
+      [
+        "Grafitowe akcenty",
+        "Ciemna stolarka i obróbki. Dostępność kolorów oraz wpływ na nagrzewanie do sprawdzenia."
+      ]
+    ]
+  },
   "geometry": {
     "functionalZones": {
       "externalWall": 0.28,
@@ -91,6 +151,27 @@
     "professionalReview": false
   },
   "visuals": {
+    "galleryFiles": [
+      "/images/houses/classic-55/exterior.webp",
+      "/images/houses/classic-55/alternate.webp",
+      "/images/houses/classic-55/garden.webp",
+      "/images/houses/classic-55/terrace.webp",
+      "/images/houses/classic-55/side.webp",
+      "/images/houses/classic-55/aerial.webp",
+      "/images/houses/classic-55/living.webp",
+      "/images/houses/classic-55/kitchen.webp",
+      "/images/houses/classic-55/bedroom.webp"
+    ],
+    "coordinationStatus": "Provisional AI concepts. Visual screening performed; geometry, dimensions, openings and room schedules still need coordinated architectural review. Not a CAD-derived image set.",
+    "additionalViewPrompts": {
+      "garden": "Use public/images/houses/classic-55/exterior.webp as the mandatory identity reference. Same CLASSIC 55, 10 × 5.5 m, 1 storeys, Dwuspadowy, Naturalny modrzew i jasny tynk na wybranych fragmentach. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "terrace": "Use public/images/houses/classic-55/exterior.webp as the mandatory identity reference. Same CLASSIC 55, 10 × 5.5 m, 1 storeys, Dwuspadowy, Naturalny modrzew i jasny tynk na wybranych fragmentach. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "side": "Use public/images/houses/classic-55/exterior.webp as the mandatory identity reference. Same CLASSIC 55, 10 × 5.5 m, 1 storeys, Dwuspadowy, Naturalny modrzew i jasny tynk na wybranych fragmentach. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "aerial": "Use public/images/houses/classic-55/exterior.webp as the mandatory identity reference. Same CLASSIC 55, 10 × 5.5 m, 1 storeys, Dwuspadowy, Naturalny modrzew i jasny tynk na wybranych fragmentach. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "living": "Use public/images/houses/classic-55/exterior.webp as the mandatory identity reference. Same CLASSIC 55, 10 × 5.5 m, 1 storeys, Dwuspadowy, Naturalny modrzew i jasny tynk na wybranych fragmentach. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "kitchen": "Use public/images/houses/classic-55/exterior.webp as the mandatory identity reference. Same CLASSIC 55, 10 × 5.5 m, 1 storeys, Dwuspadowy, Naturalny modrzew i jasny tynk na wybranych fragmentach. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "bedroom": "Use public/images/houses/classic-55/exterior.webp as the mandatory identity reference. Same CLASSIC 55, 10 × 5.5 m, 1 storeys, Dwuspadowy, Naturalny modrzew i jasny tynk na wybranych fragmentach. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
+    },
     "status": "Conceptual; not evidence of an engineering review",
     "front": "Photorealistic architectural photograph. Concept CLASSIC 55, external envelope 10m x 5.5m, single storey, gable metal standing seam roof, Naturalny modrzew i jasny tynk na wybranych fragmentach. Polish meadow, daylight. Front left three quarter view. Dwie sypialnie w cichej części domu, otwarta kuchnia z jadalnią, salon, łazienka i wiatrołap. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
     "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same CLASSIC 55 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",

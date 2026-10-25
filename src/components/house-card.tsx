@@ -49,7 +49,12 @@ export function HouseCard({
           <Layers3 size={16} />
           {h.floors === 1 ? "Parter" : "Parter + poddasze"}
         </span>
+        <span>{h.bathrooms} {h.bathrooms === 1 ? "łazienka" : "łazienki"}</span>
+        <span>Dach {h.roof.toLocaleLowerCase("pl")}</span>
       </div>
+      <Link href={`/projekty/${h.slug}`} className="text-link card-project-link">
+        Zobacz projekt <ArrowUpRight size={18} />
+      </Link>
     </article>
   );
 }

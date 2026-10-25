@@ -1,5 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { houses } from "../src/content/houses";
+import { houseDetails } from "../src/content/house-details";
 import { planGeometry, renderPlan } from "./plan-geometry";
 const esc = (s: string) => s.replaceAll("&", "&amp;").replaceAll("<", "&lt;");
 for (const h of houses) {
@@ -16,6 +17,7 @@ for (const h of houses) {
   await writeFile(`${dir}/plan.svg`, renderPlan(h));
   const passport = {
     ...h,
+    preliminaryProgram: houseDetails(h),
     geometry: {
       functionalZones: planGeometry(h),
       externalEnvelope: `${h.width} × ${h.depth} m`,
@@ -26,6 +28,17 @@ for (const h of houses) {
       professionalReview: false,
     },
     visuals: {
+      galleryFiles: ["exterior", "alternate", "garden", "terrace", "side", "aerial", "living", "kitchen", "bedroom"].map(view => `/images/houses/${h.slug}/${view}.webp`),
+      coordinationStatus: "Provisional AI concepts. Visual screening performed; geometry, dimensions, openings and room schedules still need coordinated architectural review. Not a CAD-derived image set.",
+      additionalViewPrompts: Object.fromEntries([
+        ["garden", "Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings."],
+        ["terrace", "Eye level from existing terrace along the original front facade; preserve door and window positions."],
+        ["side", "Side elevation, nearly orthogonal, with a small portion of the front visible for identification."],
+        ["aerial", "Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace."],
+        ["living", "Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space."],
+        ["kitchen", "Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows."],
+        ["bedroom", "Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony."],
+      ].map(([view, direction]) => [view, `Use public${h.image} as the mandatory identity reference. Same ${h.name}, ${h.width} × ${h.depth} m, ${h.floors} storeys, ${h.roof}, ${h.facade}. ${direction} Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.`])),
       status: "Conceptual; not evidence of an engineering review",
       front: `Photorealistic architectural photograph. Concept ${h.name}, external envelope ${h.width}m x ${h.depth}m, ${h.floors === 1 ? "single storey" : "ground floor and habitable attic"}, gable metal standing seam roof, ${h.facade}. Polish meadow, daylight. Front left three quarter view. ${h.layout} No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.`,
       alternate: `Use the approved front image as a mandatory identity reference. Exactly the same ${h.name} building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.`,

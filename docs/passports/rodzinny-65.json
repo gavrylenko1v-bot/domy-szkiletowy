@@ -28,6 +28,71 @@
   "alternate": "/images/houses/rodzinny-65/alternate.webp",
   "plan": "/images/houses/rodzinny-65/plan.svg",
   "imageStatus": "concept-render",
+  "preliminaryProgram": {
+    "rooms": [
+      {
+        "name": "Salon z aneksem kuchennym",
+        "area": 20,
+        "level": 0
+      },
+      {
+        "name": "Sypialnia",
+        "area": 10,
+        "level": 0
+      },
+      {
+        "name": "Pokój dziecka 1",
+        "area": 7,
+        "level": 0
+      },
+      {
+        "name": "Pokój dziecka 2",
+        "area": 7,
+        "level": 0
+      },
+      {
+        "name": "Łazienka",
+        "area": 4,
+        "level": 0
+      },
+      {
+        "name": "Wejście i komunikacja",
+        "area": 5,
+        "level": 0
+      },
+      {
+        "name": "Strefa techniczna",
+        "area": 2,
+        "level": 0
+      }
+    ],
+    "gross": 65,
+    "roomCount": 4,
+    "structure": "Szkielet drewniany; przekroje, usztywnienia i układ warstw dobiera konstruktor.",
+    "roofPitch": "35° — założenie koncepcyjne",
+    "terrace": "Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
+    "glazing": "Większe przeszklenie przy salonie; oddzielne okna w sypialniach. Ochronę przed przegrzewaniem i widoki należy sprawdzić na działce.",
+    "changes": [
+      "Odbicie układu po sprawdzeniu nasłonecznienia i dostępu do drogi.",
+      "Połączenie jednego z mniejszych pokoi ze strefą dzienną lub urządzenie gabinetu.",
+      "Dobór tarasu, osłon przeciwsłonecznych i materiału elewacji.",
+      "Dobór ogrzewania, wentylacji i miejsca na urządzenia przez projektanta instalacji."
+    ],
+    "finishes": [
+      [
+        "Naturalne drewno",
+        "Deska naturalna z fragmentami jasnej okładziny. Sposób zabezpieczenia i konserwacji do ustalenia."
+      ],
+      [
+        "Drewno i jasna okładzina",
+        "Jaśniejszy charakter bryły; system elewacji i detale połączeń wymagają doboru projektowego."
+      ],
+      [
+        "Grafitowe akcenty",
+        "Ciemna stolarka i obróbki. Dostępność kolorów oraz wpływ na nagrzewanie do sprawdzenia."
+      ]
+    ]
+  },
   "geometry": {
     "functionalZones": {
       "externalWall": 0.28,
@@ -91,6 +156,27 @@
     "professionalReview": false
   },
   "visuals": {
+    "galleryFiles": [
+      "/images/houses/rodzinny-65/exterior.webp",
+      "/images/houses/rodzinny-65/alternate.webp",
+      "/images/houses/rodzinny-65/garden.webp",
+      "/images/houses/rodzinny-65/terrace.webp",
+      "/images/houses/rodzinny-65/side.webp",
+      "/images/houses/rodzinny-65/aerial.webp",
+      "/images/houses/rodzinny-65/living.webp",
+      "/images/houses/rodzinny-65/kitchen.webp",
+      "/images/houses/rodzinny-65/bedroom.webp"
+    ],
+    "coordinationStatus": "Provisional AI concepts. Visual screening performed; geometry, dimensions, openings and room schedules still need coordinated architectural review. Not a CAD-derived image set.",
+    "additionalViewPrompts": {
+      "garden": "Use public/images/houses/rodzinny-65/exterior.webp as the mandatory identity reference. Same RODZINNY 65, 10 × 6.5 m, 1 storeys, Dwuspadowy, Deska naturalna z fragmentami jasnej okładziny. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "terrace": "Use public/images/houses/rodzinny-65/exterior.webp as the mandatory identity reference. Same RODZINNY 65, 10 × 6.5 m, 1 storeys, Dwuspadowy, Deska naturalna z fragmentami jasnej okładziny. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "side": "Use public/images/houses/rodzinny-65/exterior.webp as the mandatory identity reference. Same RODZINNY 65, 10 × 6.5 m, 1 storeys, Dwuspadowy, Deska naturalna z fragmentami jasnej okładziny. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "aerial": "Use public/images/houses/rodzinny-65/exterior.webp as the mandatory identity reference. Same RODZINNY 65, 10 × 6.5 m, 1 storeys, Dwuspadowy, Deska naturalna z fragmentami jasnej okładziny. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "living": "Use public/images/houses/rodzinny-65/exterior.webp as the mandatory identity reference. Same RODZINNY 65, 10 × 6.5 m, 1 storeys, Dwuspadowy, Deska naturalna z fragmentami jasnej okładziny. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "kitchen": "Use public/images/houses/rodzinny-65/exterior.webp as the mandatory identity reference. Same RODZINNY 65, 10 × 6.5 m, 1 storeys, Dwuspadowy, Deska naturalna z fragmentami jasnej okładziny. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "bedroom": "Use public/images/houses/rodzinny-65/exterior.webp as the mandatory identity reference. Same RODZINNY 65, 10 × 6.5 m, 1 storeys, Dwuspadowy, Deska naturalna z fragmentami jasnej okładziny. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
+    },
     "status": "Conceptual; not evidence of an engineering review",
     "front": "Photorealistic architectural photograph. Concept RODZINNY 65, external envelope 10m x 6.5m, single storey, gable metal standing seam roof, Deska naturalna z fragmentami jasnej okładziny. Polish meadow, daylight. Front left three quarter view. Trzy niewielkie sypialnie w tylnej części, wspólna strefa dzienna z aneksem, łazienka oraz krótki korytarz. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
     "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same RODZINNY 65 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",

@@ -3,6 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { publishedHouses, disclaimer } from "@/content/houses";
 import { metadata, JsonLd } from "@/lib/seo";
+import { houseDetails, areaFormat } from "@/content/house-details";
+import { packages } from "@/content/site";
 import { site } from "@/content/site";
 import { Gallery } from "@/components/gallery";
 import { LeadForm } from "@/components/lead-form";
@@ -37,6 +39,7 @@ export default async function Page({
   const { slug } = await params;
   const h = publishedHouses.find((h) => h.slug === slug);
   if (!h) notFound();
+  const details = houseDetails(h);
   const specs = [
     ["Powierzchnia zabudowy", `${h.footprint} m²`],
     ["Powierzchnia użytkowa", `ok. ${h.usable} m²`],
@@ -46,6 +49,9 @@ export default async function Page({
     ["Kondygnacje", h.floors === 1 ? "Parter" : "Parter + poddasze"],
     ["Dach", h.roof],
     ["Styl", h.style],
+    ["Powierzchnia całkowita — szacunek", `${details.gross} m²`],
+    ["Pokoje (z salonem)", details.roomCount],
+    ["Nachylenie dachu", details.roofPitch],
   ];
   return (
     <>
@@ -95,6 +101,15 @@ export default async function Page({
           images={[
             { src: h.image, alt: `${h.name} — widok główny, koncepcja` },
             { src: h.alternate, alt: `${h.name} — drugi widok koncepcyjny` },
+            ...[
+              ["garden", "widok od ogrodu"],
+              ["terrace", "widok z tarasu"],
+              ["side", "elewacja boczna"],
+              ["aerial", "widok z góry"],
+              ["living", "wnętrze salonu"],
+              ["kitchen", "wnętrze kuchni"],
+              ["bedroom", "wnętrze sypialni"],
+            ].map(([file, label]) => ({src: `/images/houses/${h.slug}/${file}.webp`, alt: `${h.name} — ${label}, wizualizacja koncepcyjna`})),
             {
               src: h.plan,
               alt: `${h.name} — schemat stref, nie rzut budowlany`,
@@ -187,6 +202,36 @@ export default async function Page({
             />
           </div>
         </div>
+      </section>
+      <section className="shell room-schedule" aria-labelledby="room-heading">
+        <span className="eyebrow">PROGRAM POWIERZCHNIOWY</span>
+        <h2 id="room-heading">Miejsce na codzienność.</h2>
+        <p>Wstępny podział zakładanej powierzchni użytkowej. To bilans do dalszego projektowania, a nie obmiar pól na schemacie. Wartości uwzględniają założenia dotyczące przegród i skosów; wymagają weryfikacji w dokumentacji.</p>
+        <table>
+          <caption>{h.name} — orientacyjny bilans pomieszczeń</caption>
+          <thead><tr><th scope="col">Pomieszczenie / strefa</th><th scope="col">Poziom</th><th scope="col">Powierzchnia</th></tr></thead>
+          <tbody>{details.rooms.map((r, i) => <tr key={i}><th scope="row">{r.name}</th><td>{r.level === 0 ? "Parter" : "Poddasze"}</td><td>{areaFormat(r.area)} m²</td></tr>)}</tbody>
+          <tfoot><tr><th colSpan={2} scope="row">Razem — użytkowa, orientacyjnie</th><td>{areaFormat(details.rooms.reduce((sum,r) => sum + r.area, 0))} m²</td></tr></tfoot>
+        </table>
+        <p className="notice">Zabudowy: {h.footprint} m² — rzut zewnętrznego obrysu. Całkowita: ok. {details.gross} m² — wstępna suma obrysów {h.floors === 1 ? "kondygnacji" : "obu kondygnacji"}, przed szczegółowym rozliczeniem otworów i skosów. Użytkowa: ok. {h.usable} m² — wnętrze po uwzględnieniu przegród i przyjętej metody pomiaru. Taras nie wchodzi do tych wartości.</p>
+      </section>
+      <section className="shell project-options">
+        <span className="eyebrow">MATERIAŁY I MOŻLIWOŚCI</span>
+        <h2>Twój dom. Twój charakter.</h2>
+        <div className="content-cards">{details.finishes.map(([name, description]) => <article key={name}><h3>{name}</h3><p>{description}</p></article>)}</div>
+        <div className="content-cards">
+          <article><h3>Konstrukcja</h3><p>{details.structure}</p></article>
+          <article><h3>Taras i ogród</h3><p>{details.terrace}</p></article>
+          <article><h3>Światło we wnętrzu</h3><p>{details.glazing}</p></article>
+        </div>
+        <h3>Co można omówić z projektantem?</h3>
+        <ul className="benefit-list">{details.changes.map((change) => <li key={change}><Check size={18} />{change}</li>)}</ul>
+      </section>
+      <section className="shell project-options">
+        <span className="eyebrow">ZAKRES DO UZGODNIENIA</span>
+        <h2>Wybierz punkt wyjścia.</h2>
+        <p>Poniższe warianty pomagają przygotować zapytanie. Wiążący zakres, materiały i odpowiedzialność stron określa indywidualna oferta oraz umowa.</p>
+        <div className="content-cards">{packages.map((pack) => <article key={pack.name}><h3>{pack.name}</h3><p>{pack.description}</p><ul>{pack.items.map((item) => <li key={item}>{item}</li>)}</ul><Link className="text-link" href="#wycena">Zapytaj o indywidualną wycenę <ArrowUpRight size={18}/></Link></article>)}</div>
       </section>
       <section className="shell legal-notice">
         <p>{disclaimer}</p>

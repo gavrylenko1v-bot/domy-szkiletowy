@@ -91,6 +91,17 @@ test("gallery, FAQ, hidden realisations and consent-free tracking behavior", asy
   await expect(
     page.getByRole("button", { name: "Pokaż zdjęcie 2" }),
   ).toHaveAttribute("aria-pressed", "true");
+  const expand = page.getByRole("button", { name: "Otwórz galerię na pełnym ekranie" });
+  await expand.click();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog).toBeVisible();
+  await page.keyboard.press("End");
+  await expect(dialog.locator("img")).toHaveAttribute("src", /plan/);
+  await page.keyboard.press("Home");
+  await expect(dialog.locator("img")).toHaveAttribute("alt", /widok główny/);
+  await page.keyboard.press("Escape");
+  await expect(dialog).toHaveCount(0);
+  await expect(expand).toBeFocused();
   await page.goto("/faq");
   const summary = page.locator("summary").first();
   await summary.click();
@@ -101,6 +112,26 @@ test("gallery, FAQ, hidden realisations and consent-free tracking behavior", asy
   expect(await context.cookies()).toHaveLength(0);
   expect((await page.goto("/realizacje"))?.status()).toBe(404);
   expect((await page.goto("/projekty/not-a-house"))?.status()).toBe(404);
+});
+
+test("requested viewport widths keep navigation, catalog and project readable", async ({ page }, info) => {
+  test.skip(info.project.name !== "desktop", "Widths exercised once in desktop Chromium; mobile gestures have separate tests.");
+  test.setTimeout(180000);
+  const errors: string[] = [];
+  page.on("pageerror", (error) => errors.push(error.message));
+  for (const width of [320,375,390,430,768,1024,1440,1920]) {
+    await page.setViewportSize({width, height: 1000});
+    for (const route of ["/", "/projekty", "/projekty/mini-35", "/projekty/max-70", "/kontakt"]) {
+      await page.goto(route);
+      await page.evaluate(() => document.fonts.ready);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${route} at ${width}`).toBe(true);
+      const small = await page.locator("main p, main label, main .button, main .render-caption").evaluateAll(nodes => nodes.filter(n => getComputedStyle(n).display !== "none" && parseFloat(getComputedStyle(n).fontSize) < 14).map(n => n.textContent));
+      expect(small, `${route} tiny text at ${width}`).toEqual([]);
+    }
+    await page.goto("/projekty");
+    await page.screenshot({path: `test-results/catalog-${width}.png`, fullPage: true});
+  }
+  expect(errors).toEqual([]);
 });
 test("mobile menu opens, navigates and closes; screenshots", async ({
   page,

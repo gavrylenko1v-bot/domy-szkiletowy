@@ -130,6 +130,7 @@ export function renderPlan(h: House) {
           `fill="${r.type === "living" ? "#e4e9da" : r.type === "bath" ? "#dce6e4" : r.type === "hall" || r.type === "stairs" ? "#f1ede3" : "#f0ebe0"}" stroke="#344b3f" stroke-width="5"`,
         );
         parts += text(x + w / 2, y + d / 2, r.label, Math.min(11, w / 10));
+        parts += text(x + w / 2, y + d / 2 + 16, `${r.w.toFixed(2)} × ${r.d.toFixed(2)} m`, Math.min(10, w / 10));
         if (r.type === "bed" && w > 120 && d > 100) {
           parts += rect(
             x + 14,
@@ -171,5 +172,5 @@ export function renderPlan(h: House) {
       return parts;
     })
     .join("");
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${vw} ${vh}" role="img"><title>${h.name} — schemat funkcjonalny</title><rect width="100%" height="100%" fill="#f8f7f4"/>${levels}<text x="30" y="${vh - 37}" font-family="Arial" font-size="10" fill="#344b3f">KONCEPCJA. NIE JEST RYSUNKIEM BUDOWLANYM.</text><text x="30" y="${vh - 19}" font-family="Arial" font-size="9" fill="#697267">Przejścia, okna, drzwi, schody i instalacje do opracowania. * Strefa do podziału.</text></svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${vw} ${vh}" role="img"><title>${h.name} — schemat funkcjonalny</title><rect width="100%" height="100%" fill="#f8f7f3"/>${levels}<text x="30" y="${vh - 37}" font-family="Arial" font-size="10" fill="#20282b">KONCEPCJA. WYMIARY STREF, NIE WYMIARY GOTOWYCH POMIESZCZEŃ.</text><text x="30" y="${vh - 19}" font-family="Arial" font-size="9" fill="#667078">Przejścia, okna, drzwi, schody i instalacje do opracowania. * Strefa do podziału.</text></svg>`;
 }

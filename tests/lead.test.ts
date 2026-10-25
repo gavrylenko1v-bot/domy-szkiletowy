@@ -5,6 +5,7 @@ import { POST } from "../src/app/api/leads/route";
 import { validateLead } from "../src/lib/lead-validation";
 import { localLimit } from "../src/lib/rate-limit";
 import { houses } from "../src/content/houses";
+import { houseDetails } from "../src/content/house-details";
 const good = {
   name: "Test użytkownika",
   email: "test@example.invalid",
@@ -33,7 +34,11 @@ test("catalog geometry, unique identifiers, media and area estimates are consist
     assert.equal(h.width * h.depth, h.footprint);
     assert.ok(h.footprint <= 70);
     assert.ok(h.usable < h.footprint * h.floors);
-    for (const path of [h.image, h.alternate, h.plan])
+    const details = houseDetails(h);
+    assert.equal(details.rooms.reduce((sum, room) => sum + room.area, 0), h.usable, h.name);
+    assert.equal(details.rooms.filter((room) => /Łazienka/.test(room.name)).length, h.bathrooms, h.name);
+    assert.ok(details.rooms.every((room) => room.area > 0 && room.level < h.floors));
+    for (const path of [h.image, h.alternate, h.plan, ...["garden", "terrace", "side", "aerial", "living", "kitchen", "bedroom"].map(view => `/images/houses/${h.slug}/${view}.webp`)])
       await access("public" + path);
   }
 });
