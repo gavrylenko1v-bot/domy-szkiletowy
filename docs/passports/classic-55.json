@@ -3,7 +3,7 @@
   "slug": "classic-55",
   "tagline": "Proporcje, które zostają na lata.",
   "footprint": 55,
-  "usable": 45,
+  "usable": 44.2,
   "width": 10,
   "depth": 5.5,
   "floors": 1,
@@ -16,6 +16,7 @@
   "note": "Powierzchnia użytkowa zależy od grubości przegród i projektu instalacji.",
   "id": "DOM-03",
   "roof": "Dwuspadowy",
+  "terrace": true,
   "description": "CLASSIC 55 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 55 m². Dwie sypialnie w cichej części domu, otwarta kuchnia z jadalnią, salon, łazienka i wiatrołap. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
   "benefits": [
     "Zwarta, czytelna bryła",
@@ -31,33 +32,33 @@
   "preliminaryProgram": {
     "rooms": [
       {
-        "name": "Salon z kuchnią i jadalnią",
-        "area": 20,
-        "level": 0
-      },
-      {
-        "name": "Sypialnia",
-        "area": 10,
-        "level": 0
-      },
-      {
-        "name": "Pokój jednoosobowy",
-        "area": 7,
-        "level": 0
-      },
-      {
         "name": "Łazienka",
-        "area": 4,
+        "area": 3.89,
         "level": 0
       },
       {
-        "name": "Wejście i komunikacja",
-        "area": 3,
+        "name": "Kuchnia",
+        "area": 6.26,
         "level": 0
       },
       {
-        "name": "Szafa instalacyjna",
-        "area": 1,
+        "name": "Salon + jadalnia",
+        "area": 13.46,
+        "level": 0
+      },
+      {
+        "name": "Hol wejściowy",
+        "area": 4.69,
+        "level": 0
+      },
+      {
+        "name": "Sypialnia 1",
+        "area": 7.95,
+        "level": 0
+      },
+      {
+        "name": "Sypialnia 2",
+        "area": 7.95,
         "level": 0
       }
     ],
@@ -65,7 +66,7 @@
     "roomCount": 3,
     "structure": "Szkielet drewniany; przekroje, usztywnienia i układ warstw dobiera konstruktor.",
     "roofPitch": "35° — założenie koncepcyjne",
-    "terrace": "Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
+    "terrace": "Przewidziany w koncepcji. Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
     "glazing": "Większe przeszklenie przy salonie; oddzielne okna w sypialniach. Ochronę przed przegrzewaniem i widoki należy sprawdzić na działce.",
     "changes": [
       "Odbicie układu po sprawdzeniu nasłonecznienia i dostępu do drogi.",
@@ -89,65 +90,267 @@
     ]
   },
   "geometry": {
-    "functionalZones": {
-      "externalWall": 0.28,
-      "floors": [
-        [
+    "functionalZones": [
+      {
+        "rooms": [
           {
             "x": 0.28,
             "y": 0.28,
-            "w": 2.38,
-            "d": 1.95,
+            "w": 1.85,
+            "d": 2.1,
             "label": "Łazienka",
-            "type": "bath"
+            "type": "bath",
+            "id": "r1",
+            "area": 3.89
           },
           {
-            "x": 2.66,
+            "x": 2.25,
             "y": 0.28,
-            "w": 2.91,
-            "d": 1.95,
+            "w": 2.98,
+            "d": 2.1,
             "label": "Kuchnia",
-            "type": "living"
+            "type": "kitchen",
+            "id": "r2",
+            "area": 6.26
           },
           {
             "x": 0.28,
-            "y": 2.23,
-            "w": 5.29,
-            "d": 2.99,
-            "label": "Salon + wejście",
-            "type": "living"
+            "y": 2.5,
+            "w": 4.95,
+            "d": 2.72,
+            "label": "Salon + jadalnia",
+            "type": "living",
+            "id": "r3",
+            "area": 13.46
           },
           {
-            "x": 5.57,
+            "x": 5.35,
             "y": 0.28,
-            "w": 0.85,
+            "w": 0.95,
             "d": 4.94,
-            "label": "Hol",
-            "type": "hall"
+            "label": "Hol wejściowy",
+            "type": "hall",
+            "id": "r4",
+            "area": 4.69
           },
           {
             "x": 6.42,
             "y": 0.28,
             "w": 3.3,
-            "d": 2.47,
-            "label": "Pokój 1",
-            "type": "bed"
+            "d": 2.41,
+            "label": "Sypialnia 1",
+            "type": "bed",
+            "id": "r5",
+            "area": 7.95
           },
           {
             "x": 6.42,
-            "y": 2.75,
+            "y": 2.81,
             "w": 3.3,
-            "d": 2.47,
-            "label": "Pokój 2",
-            "type": "bed"
+            "d": 2.41,
+            "label": "Sypialnia 2",
+            "type": "bed",
+            "id": "r6",
+            "area": 7.95
           }
-        ]
-      ]
-    },
+        ],
+        "doors": [
+          {
+            "a": "r3",
+            "b": "r1",
+            "x": 1.3,
+            "y": 2.44,
+            "size": 0.8,
+            "vertical": false,
+            "passage": false
+          },
+          {
+            "a": "r1",
+            "b": "r2",
+            "x": 2.19,
+            "y": 1.55,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r2",
+            "b": "r4",
+            "x": 5.29,
+            "y": 1.55,
+            "size": 0.8,
+            "vertical": true,
+            "passage": true
+          },
+          {
+            "a": "r4",
+            "b": "r5",
+            "x": 6.36,
+            "y": 1.86,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r4",
+            "b": "r6",
+            "x": 6.36,
+            "y": 4.39,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r4",
+            "x": 5.32,
+            "y": 5.36,
+            "size": 0.9,
+            "vertical": false
+          }
+        ],
+        "windows": [
+          {
+            "a": "r1",
+            "x": 0.91,
+            "y": 0.14,
+            "size": 0.6,
+            "vertical": false
+          },
+          {
+            "a": "r2",
+            "x": 3.14,
+            "y": 0.14,
+            "size": 1.2,
+            "vertical": false
+          },
+          {
+            "a": "r3",
+            "x": 0.4,
+            "y": 5.36,
+            "size": 2.4,
+            "vertical": false
+          },
+          {
+            "a": "r5",
+            "x": 7.47,
+            "y": 0.14,
+            "size": 1.2,
+            "vertical": false
+          },
+          {
+            "a": "r6",
+            "x": 6.54,
+            "y": 5.36,
+            "size": 1.2,
+            "vertical": false
+          }
+        ],
+        "furniture": [
+          {
+            "x": 1.2,
+            "y": 0.36,
+            "w": 0.85,
+            "d": 0.85,
+            "kind": "shower",
+            "room": "r1"
+          },
+          {
+            "x": 0.5,
+            "y": 0.36,
+            "w": 0.4,
+            "d": 0.65,
+            "kind": "wc",
+            "room": "r1"
+          },
+          {
+            "x": 0.36,
+            "y": 1.9,
+            "w": 0.55,
+            "d": 0.4,
+            "kind": "basin",
+            "room": "r1"
+          },
+          {
+            "x": 2.75,
+            "y": 0.36,
+            "w": 2.4,
+            "d": 0.6,
+            "kind": "kitchen",
+            "room": "r2"
+          },
+          {
+            "x": 3.29,
+            "y": 1.01,
+            "w": 0.9,
+            "d": 0.65,
+            "kind": "table",
+            "room": "r2"
+          },
+          {
+            "x": 3.35,
+            "y": 2.58,
+            "w": 1.8,
+            "d": 0.8,
+            "kind": "sofa",
+            "room": "r3"
+          },
+          {
+            "x": 0.36,
+            "y": 4.49,
+            "w": 1.1,
+            "d": 0.65,
+            "kind": "table",
+            "room": "r3"
+          },
+          {
+            "x": 5.62,
+            "y": 0.36,
+            "w": 0.6,
+            "d": 1,
+            "kind": "wardrobe",
+            "room": "r4"
+          },
+          {
+            "x": 8.24,
+            "y": 0.36,
+            "w": 1.4,
+            "d": 2,
+            "kind": "bed",
+            "room": "r5"
+          },
+          {
+            "x": 6.5,
+            "y": 0.36,
+            "w": 1.2,
+            "d": 0.6,
+            "kind": "wardrobe",
+            "room": "r5"
+          },
+          {
+            "x": 8.24,
+            "y": 2.89,
+            "w": 1.4,
+            "d": 2,
+            "kind": "bed",
+            "room": "r6"
+          },
+          {
+            "x": 6.5,
+            "y": 2.89,
+            "w": 1.2,
+            "d": 0.6,
+            "kind": "wardrobe",
+            "room": "r6"
+          }
+        ],
+        "level": 0,
+        "openingArea": 0
+      }
+    ],
     "externalEnvelope": "10 × 5.5 m",
     "footprintCalculation": "10 × 5.5 = 55 m²",
     "assumedExternalWall": ".28 m for feasibility envelope only",
-    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "usableAreaStatus": "Clear floor areas calculated from the shown rectangles; partitions excluded; upper 4m2 stair opening excluded. Not statutory usable area; attic slopes not deducted. All concepts stay below 70m2 even before slope deductions.",
     "professionalReview": false
   },
   "visuals": {

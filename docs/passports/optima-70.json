@@ -3,19 +3,20 @@
   "slug": "optima-70",
   "tagline": "Przestrzeń dobrze przemyślana.",
   "footprint": 70,
-  "usable": 60,
+  "usable": 57.5,
   "width": 10,
   "depth": 7,
   "floors": 1,
   "bedrooms": 3,
   "bathrooms": 1,
   "style": "Minimalistyczny",
-  "facade": "Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu",
+  "facade": "Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką",
   "layout": "Salon z kuchnią i jadalnią, trzy sypialnie, łazienka, wiatrołap i wnęka techniczna.",
   "audience": "Dla rodziny potrzebującej trzech oddzielnych pokoi.",
   "note": "Wielkość pomieszczenia technicznego należy dobrać do wybranego źródła ciepła.",
   "id": "DOM-06",
-  "roof": "Dwuspadowy",
+  "roof": "Płaski",
+  "terrace": true,
   "description": "OPTIMA 70 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 70 m². Salon z kuchnią i jadalnią, trzy sypialnie, łazienka, wiatrołap i wnęka techniczna. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
   "benefits": [
     "Zwarta, czytelna bryła",
@@ -24,53 +25,53 @@
     "Możliwość dopasowania do działki"
   ],
   "published": true,
-  "image": "/images/houses/optima-70/exterior.webp",
-  "alternate": "/images/houses/optima-70/alternate.webp",
+  "image": "/images/houses/optima-70/flat-front.webp",
+  "alternate": "/images/houses/optima-70/flat-rear.webp",
   "plan": "/images/houses/optima-70/plan.svg",
   "imageStatus": "concept-render",
   "preliminaryProgram": {
     "rooms": [
       {
-        "name": "Salon z kuchnią i jadalnią",
-        "area": 23,
-        "level": 0
-      },
-      {
-        "name": "Sypialnia",
-        "area": 10,
-        "level": 0
-      },
-      {
-        "name": "Pokój 1",
-        "area": 8,
-        "level": 0
-      },
-      {
-        "name": "Pokój 2",
-        "area": 8,
+        "name": "Sypialnia 1",
+        "area": 7.02,
         "level": 0
       },
       {
         "name": "Łazienka",
-        "area": 4,
+        "area": 4.85,
         "level": 0
       },
       {
-        "name": "Wejście i komunikacja",
-        "area": 5,
+        "name": "Salon + kuchnia",
+        "area": 16.88,
         "level": 0
       },
       {
-        "name": "Strefa techniczna",
-        "area": 2,
+        "name": "Hol",
+        "area": 6.12,
+        "level": 0
+      },
+      {
+        "name": "Sypialnia 2",
+        "area": 9.6,
+        "level": 0
+      },
+      {
+        "name": "Hol wejściowy",
+        "area": 3.47,
+        "level": 0
+      },
+      {
+        "name": "Sypialnia 3",
+        "area": 9.56,
         "level": 0
       }
     ],
     "gross": 70,
     "roomCount": 4,
     "structure": "Szkielet drewniany; przekroje, usztywnienia i układ warstw dobiera konstruktor.",
-    "roofPitch": "35° — założenie koncepcyjne",
-    "terrace": "Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
+    "roofPitch": "Spadek techniczny ukryty za attyką — do zaprojektowania",
+    "terrace": "Przewidziany w koncepcji. Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
     "glazing": "Większe przeszklenie przy salonie; oddzielne okna w sypialniach. Ochronę przed przegrzewaniem i widoki należy sprawdzić na działce.",
     "changes": [
       "Odbicie układu po sprawdzeniu nasłonecznienia i dostępu do drogi.",
@@ -81,7 +82,7 @@
     "finishes": [
       [
         "Naturalne drewno",
-        "Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu. Sposób zabezpieczenia i konserwacji do ustalenia."
+        "Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką. Sposób zabezpieczenia i konserwacji do ustalenia."
       ],
       [
         "Drewno i jasna okładzina",
@@ -94,91 +95,305 @@
     ]
   },
   "geometry": {
-    "functionalZones": {
-      "externalWall": 0.28,
-      "floors": [
-        [
+    "functionalZones": [
+      {
+        "rooms": [
           {
             "x": 0.28,
             "y": 0.28,
-            "w": 3.15,
+            "w": 2.65,
             "d": 2.65,
-            "label": "Pokój 1",
-            "type": "bed"
+            "label": "Sypialnia 1",
+            "type": "bed",
+            "id": "r1",
+            "area": 7.02
           },
           {
-            "x": 3.43,
+            "x": 3.05,
             "y": 0.28,
-            "w": 3.15,
+            "w": 1.83,
             "d": 2.65,
-            "label": "Pokój 2",
-            "type": "bed"
-          },
-          {
-            "x": 6.57,
-            "y": 0.28,
-            "w": 3.15,
-            "d": 2.65,
-            "label": "Pokój 3",
-            "type": "bed"
+            "label": "Łazienka",
+            "type": "bath",
+            "id": "r2",
+            "area": 4.85
           },
           {
             "x": 0.28,
-            "y": 2.93,
-            "w": 9.44,
-            "d": 0.85,
-            "label": "Komunikacja",
-            "type": "hall"
+            "y": 3.05,
+            "w": 4.6,
+            "d": 3.67,
+            "label": "Salon + kuchnia",
+            "type": "living",
+            "id": "r3",
+            "area": 16.88
           },
           {
-            "x": 0.28,
-            "y": 3.78,
-            "w": 7.19,
-            "d": 2.94,
-            "label": "Salon + aneks",
-            "type": "living"
+            "x": 5,
+            "y": 0.28,
+            "w": 0.95,
+            "d": 6.44,
+            "label": "Hol",
+            "type": "hall",
+            "id": "r4",
+            "area": 6.12
           },
           {
-            "x": 7.47,
-            "y": 3.78,
-            "w": 2.25,
-            "d": 2.94,
-            "label": "Łaz. / wejście*",
-            "type": "bath"
+            "x": 6.07,
+            "y": 0.28,
+            "w": 3.65,
+            "d": 2.63,
+            "label": "Sypialnia 2",
+            "type": "bed",
+            "id": "r5",
+            "area": 9.6
+          },
+          {
+            "x": 6.07,
+            "y": 3.03,
+            "w": 3.65,
+            "d": 0.95,
+            "label": "Hol wejściowy",
+            "type": "hall",
+            "id": "r6",
+            "area": 3.47
+          },
+          {
+            "x": 6.07,
+            "y": 4.1,
+            "w": 3.65,
+            "d": 2.62,
+            "label": "Sypialnia 3",
+            "type": "bed",
+            "id": "r7",
+            "area": 9.56
           }
-        ]
-      ]
-    },
+        ],
+        "doors": [
+          {
+            "a": "r3",
+            "b": "r2",
+            "x": 4.05,
+            "y": 2.99,
+            "size": 0.8,
+            "vertical": false,
+            "passage": false
+          },
+          {
+            "a": "r2",
+            "b": "r4",
+            "x": 4.94,
+            "y": 2.1,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r4",
+            "b": "r6",
+            "x": 6.01,
+            "y": 3.15,
+            "size": 0.8,
+            "vertical": true,
+            "passage": true
+          },
+          {
+            "a": "r2",
+            "b": "r1",
+            "x": 2.99,
+            "y": 2.1,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r4",
+            "b": "r5",
+            "x": 6.01,
+            "y": 2.08,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r4",
+            "b": "r7",
+            "x": 6.01,
+            "y": 5.89,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r6",
+            "x": 9.86,
+            "y": 3.11,
+            "size": 0.9,
+            "vertical": true
+          }
+        ],
+        "windows": [
+          {
+            "a": "r1",
+            "x": 1.01,
+            "y": 0.14,
+            "size": 1.2,
+            "vertical": false
+          },
+          {
+            "a": "r2",
+            "x": 3.67,
+            "y": 0.14,
+            "size": 0.6,
+            "vertical": false
+          },
+          {
+            "a": "r3",
+            "x": 0.4,
+            "y": 6.86,
+            "size": 2.4,
+            "vertical": false
+          },
+          {
+            "a": "r5",
+            "x": 7.3,
+            "y": 0.14,
+            "size": 1.2,
+            "vertical": false
+          },
+          {
+            "a": "r7",
+            "x": 6.19,
+            "y": 6.86,
+            "size": 1.2,
+            "vertical": false
+          }
+        ],
+        "furniture": [
+          {
+            "x": 0.36,
+            "y": 0.36,
+            "w": 1.4,
+            "d": 2,
+            "kind": "bed",
+            "room": "r1"
+          },
+          {
+            "x": 3.95,
+            "y": 0.36,
+            "w": 0.85,
+            "d": 0.85,
+            "kind": "shower",
+            "room": "r2"
+          },
+          {
+            "x": 3.25,
+            "y": 0.36,
+            "w": 0.4,
+            "d": 0.65,
+            "kind": "wc",
+            "room": "r2"
+          },
+          {
+            "x": 3.69,
+            "y": 1.41,
+            "w": 0.55,
+            "d": 0.4,
+            "kind": "basin",
+            "room": "r2"
+          },
+          {
+            "x": 0.36,
+            "y": 3.13,
+            "w": 2.4,
+            "d": 0.6,
+            "kind": "kitchen",
+            "room": "r3"
+          },
+          {
+            "x": 0.36,
+            "y": 5.84,
+            "w": 1.8,
+            "d": 0.8,
+            "kind": "sofa",
+            "room": "r3"
+          },
+          {
+            "x": 3.7,
+            "y": 5.99,
+            "w": 1.1,
+            "d": 0.65,
+            "kind": "table",
+            "room": "r3"
+          },
+          {
+            "x": 5.27,
+            "y": 0.36,
+            "w": 0.6,
+            "d": 1,
+            "kind": "wardrobe",
+            "room": "r4"
+          },
+          {
+            "x": 8.24,
+            "y": 0.36,
+            "w": 1.4,
+            "d": 2,
+            "kind": "bed",
+            "room": "r5"
+          },
+          {
+            "x": 6.15,
+            "y": 0.36,
+            "w": 1.2,
+            "d": 0.6,
+            "kind": "wardrobe",
+            "room": "r5"
+          },
+          {
+            "x": 8.24,
+            "y": 4.18,
+            "w": 1.4,
+            "d": 2,
+            "kind": "bed",
+            "room": "r7"
+          },
+          {
+            "x": 6.15,
+            "y": 4.18,
+            "w": 1.2,
+            "d": 0.6,
+            "kind": "wardrobe",
+            "room": "r7"
+          }
+        ],
+        "level": 0,
+        "openingArea": 0
+      }
+    ],
     "externalEnvelope": "10 × 7 m",
     "footprintCalculation": "10 × 7 = 70 m²",
     "assumedExternalWall": ".28 m for feasibility envelope only",
-    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "usableAreaStatus": "Clear floor areas calculated from the shown rectangles; partitions excluded; upper 4m2 stair opening excluded. Not statutory usable area; attic slopes not deducted. All concepts stay below 70m2 even before slope deductions.",
     "professionalReview": false
   },
   "visuals": {
     "galleryFiles": [
-      "/images/houses/optima-70/exterior.webp",
-      "/images/houses/optima-70/alternate.webp",
-      "/images/houses/optima-70/garden.webp",
-      "/images/houses/optima-70/terrace.webp",
-      "/images/houses/optima-70/side.webp",
-      "/images/houses/optima-70/aerial.webp",
-      "/images/houses/optima-70/living.webp",
-      "/images/houses/optima-70/kitchen.webp",
-      "/images/houses/optima-70/bedroom.webp"
+      "/images/houses/optima-70/flat-front.webp",
+      "/images/houses/optima-70/flat-rear.webp"
     ],
     "coordinationStatus": "Provisional AI concepts. Visual screening performed; geometry, dimensions, openings and room schedules still need coordinated architectural review. Not a CAD-derived image set.",
     "additionalViewPrompts": {
-      "garden": "Use public/images/houses/optima-70/exterior.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Dwuspadowy, Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "terrace": "Use public/images/houses/optima-70/exterior.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Dwuspadowy, Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "side": "Use public/images/houses/optima-70/exterior.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Dwuspadowy, Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "aerial": "Use public/images/houses/optima-70/exterior.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Dwuspadowy, Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "living": "Use public/images/houses/optima-70/exterior.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Dwuspadowy, Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "kitchen": "Use public/images/houses/optima-70/exterior.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Dwuspadowy, Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "bedroom": "Use public/images/houses/optima-70/exterior.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Dwuspadowy, Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
+      "garden": "Use public/images/houses/optima-70/flat-front.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Płaski, Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "terrace": "Use public/images/houses/optima-70/flat-front.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Płaski, Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "side": "Use public/images/houses/optima-70/flat-front.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Płaski, Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "aerial": "Use public/images/houses/optima-70/flat-front.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Płaski, Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "living": "Use public/images/houses/optima-70/flat-front.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Płaski, Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "kitchen": "Use public/images/houses/optima-70/flat-front.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Płaski, Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "bedroom": "Use public/images/houses/optima-70/flat-front.webp as the mandatory identity reference. Same OPTIMA 70, 10 × 7 m, 1 storeys, Płaski, Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
     },
     "status": "Conceptual; not evidence of an engineering review",
-    "front": "Photorealistic architectural photograph. Concept OPTIMA 70, external envelope 10m x 7m, single storey, gable metal standing seam roof, Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu. Polish meadow, daylight. Front left three quarter view. Salon z kuchnią i jadalnią, trzy sypialnie, łazienka, wiatrołap i wnęka techniczna. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "front": "Photorealistic architectural photograph. Concept OPTIMA 70, external envelope 10m x 7m, single storey, flat roof with concealed drainage behind graphite parapet, Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką. Polish meadow, daylight. Front left three quarter view. Salon z kuchnią i jadalnią, trzy sypialnie, łazienka, wiatrołap i wnęka techniczna. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
     "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same OPTIMA 70 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
     "plan": "Top down schematic floor plan for OPTIMA 70, 10 x 7m external footprint, 1 levels. Salon z kuchnią i jadalnią, trzy sypialnie, łazienka, wiatrołap i wnęka techniczna. Wielkość pomieszczenia technicznego należy dobrać do wybranego źródła ciepła. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
   }

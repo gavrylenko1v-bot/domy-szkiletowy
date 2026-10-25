@@ -8,6 +8,7 @@ export function Catalog() {
     [bedrooms, setBedrooms] = useState(""),
     [floors, setFloors] = useState(""),
     [roof, setRoof] = useState(""),
+    [terrace, setTerrace] = useState(""),
     [style, setStyle] = useState(""),
     [sort, setSort] = useState("featured");
   const reset = () => {
@@ -15,25 +16,27 @@ export function Catalog() {
     setBedrooms("");
     setFloors("");
     setRoof("");
+    setTerrace("");
     setStyle("");
     setSort("featured");
   };
   const filtered = useMemo(() => {
     const list = publishedHouses.filter(
       (h) =>
-        h.footprint <= Number(max) &&
-        (!bedrooms || h.bedrooms === Number(bedrooms)) &&
+        h.usable <= Number(max) &&
+        (!bedrooms || h.bedrooms+1 === Number(bedrooms)) &&
         (!floors || h.floors === Number(floors)) &&
         (!roof || h.roof === roof) &&
+        (!terrace || h.terrace === (terrace === "yes")) &&
         (!style || h.style === style),
     );
-    if (sort === "area-asc") list.sort((a, b) => a.footprint - b.footprint);
-    if (sort === "area-desc") list.sort((a, b) => b.footprint - a.footprint);
+    if (sort === "area-asc") list.sort((a, b) => a.usable - b.usable);
+    if (sort === "area-desc") list.sort((a, b) => b.usable - a.usable);
     if (sort === "name")
       list.sort((a, b) => a.name.localeCompare(b.name, "pl"));
     return list;
-  }, [max, bedrooms, floors, roof, style, sort]);
-  const active = max !== "70" || !!bedrooms || !!floors || !!roof || !!style;
+  }, [max, bedrooms, floors, roof, terrace, style, sort]);
+  const active = max !== "70" || !!bedrooms || !!floors || !!roof || !!terrace || !!style;
   return (
     <div className="shell catalog">
       <div className="catalog-filter">
@@ -43,7 +46,7 @@ export function Catalog() {
         </div>
         <div className="filter-grid">
           <label>
-            Powierzchnia zabudowy
+            Łączna powierzchnia podłóg
             <select value={max} onChange={(e) => setMax(e.target.value)}>
               <option value="70">Do 70 m²</option>
               <option value="60">Do 60 m²</option>
@@ -53,13 +56,13 @@ export function Catalog() {
             </select>
           </label>
           <label>
-            Sypialnie
+            Pokoje (z salonem)
             <select
               value={bedrooms}
               onChange={(e) => setBedrooms(e.target.value)}
             >
               <option value="">Dowolna liczba</option>
-              {[1, 2, 3, 4].map((n) => (
+              {[2, 3, 4].map((n) => (
                 <option key={n} value={n}>
                   {n}
                 </option>
@@ -79,7 +82,15 @@ export function Catalog() {
             <select value={roof} onChange={(e) => setRoof(e.target.value)}>
               <option value="">Wszystkie</option>
               <option>Dwuspadowy</option>
-              <option>Jednospadowy</option>
+              <option>Płaski</option>
+            </select>
+          </label>
+          <label>
+            Taras
+            <select value={terrace} onChange={(e) => setTerrace(e.target.value)}>
+              <option value="">Wszystkie warianty</option>
+              <option value="yes">W koncepcji</option>
+              <option value="no">Opcjonalny</option>
             </select>
           </label>
           <label>
@@ -129,7 +140,7 @@ export function Catalog() {
         </div>
       )}
       <p className="catalog-note">
-        Powierzchnia zabudowy nie jest powierzchnią użytkową. Koncepcje wymagają
+        Łączna powierzchnia podłóg nie jest powierzchnią użytkową. Koncepcje wymagają
         weryfikacji architektonicznej.
       </p>
     </div>

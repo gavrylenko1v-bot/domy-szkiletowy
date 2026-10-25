@@ -1,3 +1,4 @@
+import { netFloorArea } from "./floor-plans";
 export type House = {
   id: string;
   slug: string;
@@ -11,7 +12,8 @@ export type House = {
   floors: 1 | 2;
   bedrooms: number;
   bathrooms: number;
-  roof: "Dwuspadowy" | "Jednospadowy";
+  roof: "Dwuspadowy" | "Płaski";
+  terrace: boolean;
   style: "Skandynawski" | "Nowoczesna stodoła" | "Minimalistyczny";
   facade: string;
   layout: string;
@@ -29,10 +31,10 @@ const concepts = [
     name: "MINI 35",
     slug: "mini-35",
     tagline: "Mały dom. Wielka swoboda.",
-    footprint: 35,
+    footprint: 43.2,
     usable: 27,
-    width: 7,
-    depth: 5,
+    width: 7.5,
+    depth: 5.76,
     floors: 1,
     bedrooms: 1,
     bathrooms: 1,
@@ -127,20 +129,20 @@ const concepts = [
     bedrooms: 3,
     bathrooms: 1,
     style: "Minimalistyczny",
-    facade: "Jasne drewno, grafitowe akcenty i metalowe pokrycie dachu",
+    facade: "Jasne drewno, grafitowy parapet i płaski dach ze spadkiem ukrytym za attyką",
     layout:
       "Salon z kuchnią i jadalnią, trzy sypialnie, łazienka, wiatrołap i wnęka techniczna.",
     audience: "Dla rodziny potrzebującej trzech oddzielnych pokoi.",
     note: "Wielkość pomieszczenia technicznego należy dobrać do wybranego źródła ciepła.",
   },
   {
-    name: "SMART 48",
+    name: "SMART",
     slug: "smart-48",
     tagline: "Więcej możliwości na małej działce.",
-    footprint: 48,
+    footprint: 40.0,
     usable: 61,
     width: 8,
-    depth: 6,
+    depth: 5.0,
     floors: 2,
     bedrooms: 2,
     bathrooms: 1,
@@ -152,12 +154,12 @@ const concepts = [
     note: "Orientacyjna powierzchnia użytkowa poddasza uwzględnia skosy; wysokości i schody wymagają projektu.",
   },
   {
-    name: "FAMILY PLUS 55",
+    name: "FAMILY PLUS",
     slug: "family-plus-55",
     tagline: "Miejsce na kolejny rozdział.",
-    footprint: 55,
+    footprint: 44.0,
     usable: 72,
-    width: 10,
+    width: 8,
     depth: 5.5,
     floors: 2,
     bedrooms: 3,
@@ -170,13 +172,13 @@ const concepts = [
     note: "Pokój na parterze jest kompaktowy. Dwie łazienki zakładają wspólny pion instalacyjny.",
   },
   {
-    name: "STODOŁA 60",
+    name: "STODOŁA",
     slug: "stodola-60",
     tagline: "Prosta forma. Wyjątkowy charakter.",
-    footprint: 60,
+    footprint: 44.52,
     usable: 78,
-    width: 10,
-    depth: 6,
+    width: 8.4,
+    depth: 5.3,
     floors: 2,
     bedrooms: 3,
     bathrooms: 2,
@@ -188,28 +190,30 @@ const concepts = [
     note: "Wariant 2–3 sypialni: pokój na parterze może powiększyć salon. Nie przewidujemy otwartej antresoli w wariancie 3 sypialni.",
   },
   {
-    name: "MAX 70",
+    name: "MAX",
     slug: "max-70",
     tagline: "Dom, który mieści Twoje plany.",
-    footprint: 70,
+    footprint: 44.72,
     usable: 94,
-    width: 10,
-    depth: 7,
+    width: 8.6,
+    depth: 5.2,
     floors: 2,
-    bedrooms: 4,
+    bedrooms: 3,
     bathrooms: 2,
     style: "Nowoczesna stodoła",
     facade: "Naturalne drewno, grafitowa blacha i ciemna stolarka",
     layout:
-      "Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: trzy pokoje, łazienka i hol.",
-    audience: "Dla większej rodziny lub osób potrzebujących gabinetu.",
-    note: "Wariant 3–4 sypialni: czwarty pokój można przeznaczyć na gabinet. Poddasze wymaga sprawdzenia wysokości pod skosami.",
+      "Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: dwie sypialnie, łazienka i hol.",
+    audience: "Dla rodziny potrzebującej pokoju do pracy na parterze.",
+    note: "Trzy pokoje sypialne: pokój na parterze można przeznaczyć na gabinet. Poddasze wymaga sprawdzenia wysokości pod skosami.",
   },
 ] as const;
 export const houses: House[] = concepts.map((h, i) => ({
   ...h,
   id: `DOM-${String(i + 1).padStart(2, "0")}`,
-  roof: "Dwuspadowy",
+  roof: h.slug === "optima-70" ? "Płaski" : "Dwuspadowy",
+  usable: netFloorArea(h),
+  terrace: !["mini-35", "smart-48"].includes(h.slug),
   description: `${h.name} to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy ${h.footprint} m². ${h.layout} Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.`,
   benefits: [
     "Zwarta, czytelna bryła",
@@ -220,8 +224,8 @@ export const houses: House[] = concepts.map((h, i) => ({
     "Możliwość dopasowania do działki",
   ],
   published: true,
-  image: `/images/houses/${h.slug}/exterior.webp`,
-  alternate: `/images/houses/${h.slug}/alternate.webp`,
+  image: `/images/houses/${h.slug}/${h.slug === "optima-70" ? "flat-front" : "exterior"}.webp`,
+  alternate: `/images/houses/${h.slug}/${h.slug === "optima-70" ? "flat-rear" : "alternate"}.webp`,
   plan: `/images/houses/${h.slug}/plan.svg`,
   imageStatus: "concept-render",
 }));

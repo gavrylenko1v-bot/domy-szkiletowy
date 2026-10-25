@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { areaFormat } from "@/content/house-details";
 import type { House } from "@/content/houses";
 import { ArrowUpRight, BedDouble, Layers3 } from "./icons";
 export function HouseCard({
@@ -36,14 +37,14 @@ export function HouseCard({
           <h3>{h.name}</h3>
         </Link>
         <span>
-          {h.footprint} <small>m²</small>
+          {areaFormat(h.usable)} <small>m² netto</small>
         </span>
       </div>
       <p>{h.tagline}</p>
       <div className="card-specs">
         <span>
           <BedDouble size={16} />
-          {h.bedrooms} {h.bedrooms === 1 ? "sypialnia" : "sypialnie"}
+          {h.bedrooms+1} pokoje
         </span>
         <span>
           <Layers3 size={16} />

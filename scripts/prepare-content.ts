@@ -15,6 +15,7 @@ for (const h of houses) {
     await writeFile(`${dir}/${file}.svg`, svg);
   }
   await writeFile(`${dir}/plan.svg`, renderPlan(h));
+  for (let level=0;level<h.floors;level++) await writeFile(`${dir}/plan-${level}.svg`, renderPlan(h,level));
   const passport = {
     ...h,
     preliminaryProgram: houseDetails(h),
@@ -24,11 +25,11 @@ for (const h of houses) {
       footprintCalculation: `${h.width} × ${h.depth} = ${h.footprint} m²`,
       assumedExternalWall: ".28 m for feasibility envelope only",
       usableAreaStatus:
-        "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+        "Clear floor areas calculated from the shown rectangles; partitions excluded; upper 4m2 stair opening excluded. Not statutory usable area; attic slopes not deducted. All concepts stay below 70m2 even before slope deductions.",
       professionalReview: false,
     },
     visuals: {
-      galleryFiles: ["exterior", "alternate", "garden", "terrace", "side", "aerial", "living", "kitchen", "bedroom"].map(view => `/images/houses/${h.slug}/${view}.webp`),
+      galleryFiles: h.roof === "Płaski" ? [h.image,h.alternate] : ["exterior", "alternate", "garden", "terrace", "side", "aerial", "living", "kitchen", "bedroom"].map(view => `/images/houses/${h.slug}/${view}.webp`),
       coordinationStatus: "Provisional AI concepts. Visual screening performed; geometry, dimensions, openings and room schedules still need coordinated architectural review. Not a CAD-derived image set.",
       additionalViewPrompts: Object.fromEntries([
         ["garden", "Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings."],
@@ -40,7 +41,7 @@ for (const h of houses) {
         ["bedroom", "Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony."],
       ].map(([view, direction]) => [view, `Use public${h.image} as the mandatory identity reference. Same ${h.name}, ${h.width} × ${h.depth} m, ${h.floors} storeys, ${h.roof}, ${h.facade}. ${direction} Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.`])),
       status: "Conceptual; not evidence of an engineering review",
-      front: `Photorealistic architectural photograph. Concept ${h.name}, external envelope ${h.width}m x ${h.depth}m, ${h.floors === 1 ? "single storey" : "ground floor and habitable attic"}, gable metal standing seam roof, ${h.facade}. Polish meadow, daylight. Front left three quarter view. ${h.layout} No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.`,
+      front: `Photorealistic architectural photograph. Concept ${h.name}, external envelope ${h.width}m x ${h.depth}m, ${h.floors === 1 ? "single storey" : "ground floor and habitable attic"}, ${h.roof === "Płaski" ? "flat roof with concealed drainage behind graphite parapet" : "gable metal standing seam roof"}, ${h.facade}. Polish meadow, daylight. Front left three quarter view. ${h.layout} No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.`,
       alternate: `Use the approved front image as a mandatory identity reference. Exactly the same ${h.name} building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.`,
       plan: `Top down schematic floor plan for ${h.name}, ${h.width} x ${h.depth}m external footprint, ${h.floors} levels. ${h.layout} ${h.note} Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual.`,
     },
@@ -52,5 +53,5 @@ for (const h of houses) {
   );
 }
 console.log(
-  `Prepared ${houses.length} passports, 20 original SVG illustrations and 10 conceptual zoning plans.`,
+  `Prepared ${houses.length} passports, 20 original SVG illustrations and 10 coordinated concept plans.`,
 );

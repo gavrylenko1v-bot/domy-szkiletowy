@@ -1,245 +1,861 @@
 {
-  "status": "Conceptual; architectural review required",
-  "count": 30,
+  "status": "Active media only; architectural coordination required",
+  "count": 107,
   "items": [
     {
       "project": "classic-55",
       "file": "public/images/houses/classic-55/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "e5147426dd8b9c77078c1dbee4c589285411a3372ed2306dab5972b982d5c851",
       "architectApproved": false
     },
     {
       "project": "classic-55",
       "file": "public/images/houses/classic-55/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "8ed8180a54ca8cccde6da603ce66cba66519952e802cdf646bf845d022a05266",
       "architectApproved": false
     },
     {
       "project": "classic-55",
+      "file": "public/images/houses/classic-55/garden.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "f42245f4a5eead4d14e5fc94a54b22316319e3c92448e8812274b17d8b64299c",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/terrace.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "517e2a09a63254d94d519d1d909e6fc07fd2d38a4d9f0d3bebd39486b93ef0cd",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/side.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "fa92f94fc8bcc9ef2dda804dc310dfeb67f9e71fde4c652fd15e165293916762",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/aerial.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "8caec09c74833a7c227a68acb8f6b76bbbc5dbccf490188c3171bfe16368da08",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/living.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "8c35c592a17da1486fe51c2f15011a045cf13fd17e410d7cbe641d269a28a4a8",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/kitchen.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "7a0a22726bf23e171ace4fcecf436501253e1670fe9bc7b51a8c17f1f9c86736",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/bedroom.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "ee6b574a6fdbec17aa721ddefa59c427bf48e1bf400de6b8a96de6b622397684",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
       "file": "public/images/houses/classic-55/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "84b8922f77363f5016ebf3ef5b358902f71a9553a3a8f50268032664116eafbc",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "6d96539f0ec4179651bb28931d7bbe490484fbac2d08e809a90108373df5ddc6",
+      "architectApproved": false
+    },
+    {
+      "project": "classic-55",
+      "file": "public/images/houses/classic-55/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "6d96539f0ec4179651bb28931d7bbe490484fbac2d08e809a90108373df5ddc6",
       "architectApproved": false
     },
     {
       "project": "family-plus-55",
       "file": "public/images/houses/family-plus-55/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "363c77b9c3af5006611591888ff7dcded44dd6f363f89dbbcd08d59b83770a29",
       "architectApproved": false
     },
     {
       "project": "family-plus-55",
       "file": "public/images/houses/family-plus-55/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "4005fc9073f401ae0dcb86b5d5af67bfdb5bf976c0a8f370eaf9a8c5cde32976",
       "architectApproved": false
     },
     {
       "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/garden.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "623860d829b6f2b39fc8a65a47dae1aba5524814e71b003263afa76af2b2307b",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/terrace.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "ae7446fec44631ca3bc3101f635a2038673b4c0490c5a9c8fa91107241ef22ef",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/side.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "2da2454aff3b1797cbce89680f89fa78815ab6a56530734b37e28bc821ea9534",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/aerial.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "393593eebef6c712304d2f4cd138014fbf39017a45624230b077d42203465fcf",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/living.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "32fa930d1fb55d6fa5348d2dc7ecd4c7ea3206e6d2c7e08f0779d617233bf633",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/kitchen.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "957307bfe84883ad0429847e7671ad97892a0b391fc4fdd1e7c00f0dc6f1ce77",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/bedroom.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "c26d59149428fe9ce842378d4ec68480e12fa1a1070bd6d9208fe89e4927ee63",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
       "file": "public/images/houses/family-plus-55/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "2611acfb01ae87dfe12770ac0265a323391398f856b9ebe64d2044460fcc3326",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "e4891be8c1fdb539ff728eaea16d29652072d2038cd3314fdc66234120363dfa",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "6569ef25eae19ed9b6035ecde912476db8d6fd9d4304c828f6cf97557273fc1f",
+      "architectApproved": false
+    },
+    {
+      "project": "family-plus-55",
+      "file": "public/images/houses/family-plus-55/plan-1.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "2033faafabb2a4e7ef0a808abab70d26c00a3c6d0f83532673243fd54a5fde4c",
       "architectApproved": false
     },
     {
       "project": "komfort-60",
       "file": "public/images/houses/komfort-60/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "555cab3e38c38eb368f9f19ca82dd0b44770b5437f6434b8f623aa47222f8b0e",
       "architectApproved": false
     },
     {
       "project": "komfort-60",
       "file": "public/images/houses/komfort-60/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "34a4712ad388d23fbd3157f626b88c0e97c4c12de7a0f9884c07f89b9977aa92",
       "architectApproved": false
     },
     {
       "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/garden.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "06f0935f01811a770ceab0e03985ee3d6b097670f6cdef4f45d797b0503c68a7",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/terrace.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "423e6173a9aae374a2e51b047b551a26c2884783a467e6fd10ecf55b0a164483",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/side.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "ca03d069584340c7e4c000c70a76da16145dc0a44f470b3ea5a351ad26dacc84",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/aerial.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "7a45cec674d6277a1ff31fcb1168b5d1ebffe6084cc037d2d19297f6f820e6c8",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/living.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "f0a502e465ebfd9c1291b53e530d9bd97ab44621c66ba6e41500e12bcba5ea93",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/kitchen.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "b532ab2b8ec826b70ac53abd5474d293b2654b6a1b38529053fc9ee82ebbab5c",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/bedroom.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "42960c0d1a229087dedb272d65ae6e2dff15b083c5248a405072e1de8bb05a93",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
       "file": "public/images/houses/komfort-60/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "0410ea66eefad533c254e76ba49aef2234c36a7061858b5b5514f62c218fdf16",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "ebe2cff170d430302ec69038151ed2d1bfc16fa16e0f894555c1545f0a7eaaf8",
+      "architectApproved": false
+    },
+    {
+      "project": "komfort-60",
+      "file": "public/images/houses/komfort-60/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "ebe2cff170d430302ec69038151ed2d1bfc16fa16e0f894555c1545f0a7eaaf8",
       "architectApproved": false
     },
     {
       "project": "max-70",
       "file": "public/images/houses/max-70/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "6111e4124a2831fdc685819deb71bb0c1f60507e99d8d76d3beeabea6f482cfa",
       "architectApproved": false
     },
     {
       "project": "max-70",
       "file": "public/images/houses/max-70/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "6c5e34f3f29ffe44c1811d645cfc0fe6e229444b66e5441cb485e4f947cf9dab",
       "architectApproved": false
     },
     {
       "project": "max-70",
+      "file": "public/images/houses/max-70/garden.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "470bb866060c6554178f23b8973cabce13cec2f2847a4f1b613e4ba007c7ea2a",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/terrace.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "cfb3cdaec477ad906f7e71f4d6de9441a9234b65451842472562fefb49d69adb",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/side.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "15d170610aff5ad33a3c3d81356ec04e9df21629b036a83c29de1aea2125ee9e",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/aerial.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "2c1585f40bf544d8867e10004a247f398d3fd2d66a35295ec124d7074be04966",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/living.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "5bf5aef50755086cd19828db213fded52ea013b8299e69646f9ca8ad2563226b",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/kitchen.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "f56a8dc30e1f47cc39208a1f95ca929df19e08c30be70111cf4b5ea659a928a7",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/bedroom.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "751188abb489cec9a70d49a0d8955c8095123388e05b2024a139619824128731",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
       "file": "public/images/houses/max-70/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "f29015afa04a16772abf82991314b784bbfcb35818ba929a262be0131ad9dd66",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "b6f1ac624b236237835e196db80427e09387d00faf6f856f71ab41a9c3744876",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "11f67292b9d4534345abf6d96019cd2051c55e4290174e4f99f6801ccfda5698",
+      "architectApproved": false
+    },
+    {
+      "project": "max-70",
+      "file": "public/images/houses/max-70/plan-1.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "fc9409010121ff42dcaa1ea20f6c07c54b051e6982f026bb109b6b684cd331c4",
       "architectApproved": false
     },
     {
       "project": "mini-35",
       "file": "public/images/houses/mini-35/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "d0864ad999893edaa955a4023389b10409d457f1903561ddf8640b64312bc43f",
       "architectApproved": false
     },
     {
       "project": "mini-35",
       "file": "public/images/houses/mini-35/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "323c61ad59b429c9a847705c2f194c32658a197f69273b17b8e7b14c7320da76",
       "architectApproved": false
     },
     {
       "project": "mini-35",
+      "file": "public/images/houses/mini-35/garden.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "9dada9be4668d344037e280aa390f1021081cfa7b9436a93b107f7c45efdd5cd",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/terrace.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "d43c9519e21983a0fc41743ceca3a5fe54306b6038866d5582e404064fc93a31",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/side.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "013cf389d47053b23fd5f7297aa65460c4cb9a9968c17cf42057029fa3973bea",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/aerial.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "2347d1337c03993a8453b5eb69a1f17c64aa7ebdf578aeddd954395f3d8d9fc8",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/living.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "9a29622c4e5391a2c1cd930ac13fae571a4464e05736a1006be06aae5917756a",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/kitchen.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "d6d6b4271a64899c904d0d028e6d9bdac1d4e62f6d4a30308c62c23e73941d2c",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/bedroom.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "aa239a7601b585b525d0cf4c7858da89114953fe1b9cd1719f8986cb21ad6381",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
       "file": "public/images/houses/mini-35/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "d64c155c0cb16d9ccfe8c381faba58ae7c1baf3aa2dee8748d3d6fb39411f426",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "a96b529e23d0265ae6476325e4ea4d45a8120f6e62f951b7aa3c59807c7459ec",
+      "architectApproved": false
+    },
+    {
+      "project": "mini-35",
+      "file": "public/images/houses/mini-35/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "a96b529e23d0265ae6476325e4ea4d45a8120f6e62f951b7aa3c59807c7459ec",
       "architectApproved": false
     },
     {
       "project": "natura-45",
       "file": "public/images/houses/natura-45/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "614d3203920c5689222124ee1f240e4047bb58a1f9efa0dfbb22948af07da14d",
       "architectApproved": false
     },
     {
       "project": "natura-45",
       "file": "public/images/houses/natura-45/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "ff7fd94128bb2be8197b6cc8a3c930f2014ffdc8b3c9605bea898aaf9345cba4",
       "architectApproved": false
     },
     {
       "project": "natura-45",
+      "file": "public/images/houses/natura-45/garden.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "d771489e52440c6e04d1ede7ff3a8f9ac41b2f563107b0d9e16eb023cdf861ce",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/terrace.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "209f15f597c5b24ee123b8060959b56b0b81d7154e54c4e20f8d9bc74f1b4918",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/side.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "ab2c05fa0d90f95cbfbc15ef87bcf9fd84a95b8f9f2c18903f50aa629c6c6a39",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/aerial.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "7ef25ada4af9e9488842eb6a242c7b02f75c9fc9947daa72f640ed7269541806",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/living.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "27d70db5a15f764332d1422444452f2141e5c2a7ff48e390c9b65ee8f6c91a8e",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/kitchen.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "6c7348cadd81801aa78232a77c0116255609471c1683018f59cfa93acfb15189",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/bedroom.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "1b844f16eff090e8e7a0b8f923f2abc1f55da16b1e9b9be51a025db968f26ff7",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
       "file": "public/images/houses/natura-45/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "0df803c1bbc1e4959907e6b3c9733278ddf98589cc961383cefd0423b46f1680",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "9ad7c74a36953a104a4fa28cfa147243d269e121b7a59531b43dcaf08b326389",
+      "architectApproved": false
+    },
+    {
+      "project": "natura-45",
+      "file": "public/images/houses/natura-45/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "9ad7c74a36953a104a4fa28cfa147243d269e121b7a59531b43dcaf08b326389",
       "architectApproved": false
     },
     {
       "project": "optima-70",
-      "file": "public/images/houses/optima-70/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
-      "sha256": "f5de1568c58c616ac8abb0f28ab59474d5be1a028fb860e4bc458dbf28ded5f8",
+      "file": "public/images/houses/optima-70/flat-front.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "2527ac2bb1d486bbc45dcc517046098e7678a3b57041cc6c40431c0c947af900",
       "architectApproved": false
     },
     {
       "project": "optima-70",
-      "file": "public/images/houses/optima-70/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
-      "sha256": "ad013c93f4dcf6bf2cd60fd136a5850320204b26f5b4fe5c70c1cc2a2baebec9",
+      "file": "public/images/houses/optima-70/flat-rear.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "291ab97a8ec5087c1cac22d5a80ae12cd310ecd74480e8891546b91576003fa2",
       "architectApproved": false
     },
     {
       "project": "optima-70",
       "file": "public/images/houses/optima-70/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "a6cf9c13c39f2fded782ef79ce2c29796cc5d7d6d457b155fc961f08f0cca757",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "881e029f4263d49d764670313784c94ea33868c116c12aaa1735eb0abfd232bf",
+      "architectApproved": false
+    },
+    {
+      "project": "optima-70",
+      "file": "public/images/houses/optima-70/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "881e029f4263d49d764670313784c94ea33868c116c12aaa1735eb0abfd232bf",
       "architectApproved": false
     },
     {
       "project": "rodzinny-65",
       "file": "public/images/houses/rodzinny-65/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "901318fb13eb53f526fd8fa9be772abce1f4d13b984887a7ed13894638663a61",
       "architectApproved": false
     },
     {
       "project": "rodzinny-65",
       "file": "public/images/houses/rodzinny-65/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "c7f30912a5d804bf6cd6e12a6e7cb1173fecc9a955ea50ebd0d36890da6f18f3",
       "architectApproved": false
     },
     {
       "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/garden.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "a6998fef1b92dbc98943b43bf1c6f55a5602f27fddaa474de12998ca825ebe35",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/terrace.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "73bccd01111f162b43dd7c01dc0d38039fed0bf15ea6594d54b4c02618f460bb",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/side.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "1627ce7685070b8852ef2bb4d07e0ced116b5e3d6d0260ae49ed6bd9dd51945b",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/aerial.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "527a5d1ccb2cd175cfc98db5a7488b18006a435df1a8f7627518d5681d1da996",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/living.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "f0b2593574347955280fc16e9619e0cf476ed0851ad87fdf66a7dec6b913754e",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/kitchen.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "8cbd29c74233f08405358f469d186e80f35800d8fc844b2d7402ce760ee659dc",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/bedroom.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "db78f56e97016b53bf39865e016099639508757eed9ec48b751061a150b62e7d",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
       "file": "public/images/houses/rodzinny-65/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "a2e43facf78b879535f3cbfd50692f42bbe362569c47e2db4f885b5539e3c65b",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "4c6de016fe18a0317031ca1125fdedb0051bf7d25aa753805147994c9832ed7c",
+      "architectApproved": false
+    },
+    {
+      "project": "rodzinny-65",
+      "file": "public/images/houses/rodzinny-65/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "4c6de016fe18a0317031ca1125fdedb0051bf7d25aa753805147994c9832ed7c",
       "architectApproved": false
     },
     {
       "project": "smart-48",
       "file": "public/images/houses/smart-48/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "0c6a8db9f3e366a76af692c9384142603a6f3af5c6c9bbac3c2afb8b4552b330",
       "architectApproved": false
     },
     {
       "project": "smart-48",
       "file": "public/images/houses/smart-48/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "fa5f05b912e18de4072a4139ab4a756090ebdc0bc80aa392eceaccc351e0f2c8",
       "architectApproved": false
     },
     {
       "project": "smart-48",
+      "file": "public/images/houses/smart-48/garden.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "77232dc7dedefd3b00621f47c044460baf9ea9fc17199367fec0bb2c5bf25256",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/terrace.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "f2fd6d27ad00bcbfdf2ddc25434f5ae19a906abdf9546501c3db670a80f2c6b2",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/side.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "8c3fccace4db1051934dedcfb2e1dd002c1ebc6049d4418d5634ecdf17ae1b59",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/aerial.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "e05aa568130b86b873e16f2a241f22efa838266854c1536061bf57ddc9b84dbb",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/living.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "ce7317ed58b6d477c0e22a3a1040e0b3392addb13b02abd51d00fee069f43f7e",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/kitchen.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "3410fca948496da2b5c70625d7e941a5a9e1ad3be5a68260f792a4f3088615e0",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/bedroom.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "9e480e755993f772562c8736ef872e3dd6a157f5fe17b504483f4b275e8e29fe",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
       "file": "public/images/houses/smart-48/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "cebb111f79a24e5e1149e5be997d0b0d8681f9062914798c523c572d42a5829e",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "ce1127df696cf5ad73ba6d03dc5078d50f8fa1b86f10f66066ce3f503a59ba50",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "b7dd13725fe599e466c4430796c240efc879aed175b6d8c6bd499db9abca1925",
+      "architectApproved": false
+    },
+    {
+      "project": "smart-48",
+      "file": "public/images/houses/smart-48/plan-1.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "2c4c1eac024dd18fd088f69b07f89e6b4413a220909468f75dc0f614f8a33f8e",
       "architectApproved": false
     },
     {
       "project": "stodola-60",
       "file": "public/images/houses/stodola-60/exterior.webp",
-      "role": "front",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "f94492a841d11194bbb6a91c99aa9c73844ab585c3fd5c3f09c9487cca8de752",
       "architectApproved": false
     },
     {
       "project": "stodola-60",
       "file": "public/images/houses/stodola-60/alternate.webp",
-      "role": "second-angle",
-      "source": "Original AI concept visualization",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
       "sha256": "a8032d0da1186eb912482e2a5cadeab051f742ab6f21fd2c473b25a92cc20b3f",
       "architectApproved": false
     },
     {
       "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/garden.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "3bff99acb1635f949c72a30befb2c8ac7a8bca3ad5830010cc68246def8feca7",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/terrace.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "187f345585f9e0b7d6063569e60b7813f35267f1f55e716d74ecb4fe948de056",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/side.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "14ea90a23e5f3ac0f012399f73c13e1b340cb38da4503cbd10f5f4dd456ef169",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/aerial.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "6e8836ce146fd47f68c2a65ba6ab753081621581dc9263415e629a9fea8a36a2",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/living.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "7dce45fb1f9ffd7de8525676083509b247d0a31da95a0ee18c8e9e89bdbb9083",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/kitchen.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "940472441ed5a9e11094ea6e1ad02b39a781fbfaf6aa1ae11b15cb554aab4c85",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/bedroom.webp",
+      "role": "concept-render",
+      "source": "Original AI visualization, not CAD-derived",
+      "sha256": "88696633ed09b45d962de1a76cadf7ca67108cc20150bd90d630c0ea05e3cc08",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
       "file": "public/images/houses/stodola-60/plan.svg",
-      "role": "functional-zones",
-      "source": "Original parametric SVG",
-      "sha256": "92c4042e62344a4c92724c958bc22f309f5e47d1b347b55eac788f7608d64e22",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "a3cdc4b51eca02f687e176838217ed722e30c6fe78c7a0ada0feafd6a74237ce",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/plan-0.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "d7641b8b46b508426c487e1abbf7f6d929697f1c7b323f2e3de916b32cb4db41",
+      "architectApproved": false
+    },
+    {
+      "project": "stodola-60",
+      "file": "public/images/houses/stodola-60/plan-1.svg",
+      "role": "dimensioned-concept-plan",
+      "source": "Deterministic vector from src/content/floor-plans.ts",
+      "sha256": "0a5ae13cd390ac01c2857b4ee9805a75443a4471945ee6382f6ebd251f08d543",
       "architectApproved": false
     }
   ]

@@ -1,22 +1,23 @@
 {
-  "name": "MAX 70",
+  "name": "MAX",
   "slug": "max-70",
   "tagline": "Dom, który mieści Twoje plany.",
-  "footprint": 70,
-  "usable": 94,
-  "width": 10,
-  "depth": 7,
+  "footprint": 44.72,
+  "usable": 67.6,
+  "width": 8.6,
+  "depth": 5.2,
   "floors": 2,
-  "bedrooms": 4,
+  "bedrooms": 3,
   "bathrooms": 2,
   "style": "Nowoczesna stodoła",
   "facade": "Naturalne drewno, grafitowa blacha i ciemna stolarka",
-  "layout": "Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: trzy pokoje, łazienka i hol.",
-  "audience": "Dla większej rodziny lub osób potrzebujących gabinetu.",
-  "note": "Wariant 3–4 sypialni: czwarty pokój można przeznaczyć na gabinet. Poddasze wymaga sprawdzenia wysokości pod skosami.",
+  "layout": "Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: dwie sypialnie, łazienka i hol.",
+  "audience": "Dla rodziny potrzebującej pokoju do pracy na parterze.",
+  "note": "Trzy pokoje sypialne: pokój na parterze można przeznaczyć na gabinet. Poddasze wymaga sprawdzenia wysokości pod skosami.",
   "id": "DOM-10",
   "roof": "Dwuspadowy",
-  "description": "MAX 70 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 70 m². Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: trzy pokoje, łazienka i hol. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
+  "terrace": true,
+  "description": "MAX to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 44.72 m². Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: dwie sypialnie, łazienka i hol. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
   "benefits": [
     "Zwarta, czytelna bryła",
     "Naturalne materiały elewacyjne",
@@ -31,66 +32,51 @@
   "preliminaryProgram": {
     "rooms": [
       {
-        "name": "Salon z kuchnią i jadalnią",
-        "area": 29,
+        "name": "Salon + kuchnia",
+        "area": 11.62,
         "level": 0
       },
       {
-        "name": "Gabinet / sypialnia parteru",
-        "area": 9,
+        "name": "Schody + wejście",
+        "area": 9.67,
+        "level": 0
+      },
+      {
+        "name": "Pokój / gabinet",
+        "area": 10.08,
         "level": 0
       },
       {
         "name": "Łazienka",
-        "area": 4,
-        "level": 0
-      },
-      {
-        "name": "Wejście i komunikacja",
-        "area": 4,
-        "level": 0
-      },
-      {
-        "name": "Schody",
-        "area": 4,
-        "level": 0
-      },
-      {
-        "name": "Strefa techniczna",
-        "area": 2,
+        "area": 4.43,
         "level": 0
       },
       {
         "name": "Sypialnia 1",
-        "area": 12,
+        "area": 10.85,
         "level": 1
       },
       {
         "name": "Sypialnia 2",
-        "area": 11,
+        "area": 10.85,
         "level": 1
       },
       {
-        "name": "Sypialnia 3",
-        "area": 10,
+        "name": "Łazienka",
+        "area": 4.43,
         "level": 1
       },
       {
-        "name": "Łazienka poddasza",
-        "area": 4,
-        "level": 1
-      },
-      {
-        "name": "Hol poddasza",
-        "area": 5,
+        "name": "Schody + hol",
+        "area": 5.67,
         "level": 1
       }
     ],
-    "gross": 140,
-    "roomCount": 5,
+    "gross": 89.44,
+    "roomCount": 4,
     "structure": "Szkielet drewniany; przekroje, usztywnienia i układ warstw dobiera konstruktor.",
     "roofPitch": "40° — założenie koncepcyjne",
-    "terrace": "Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
+    "terrace": "Przewidziany w koncepcji. Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
     "glazing": "Przeszklenie salonu oraz okna sypialni na poddaszu. Wymiary, wysokości parapetów i drogi ewakuacji wymagają sprawdzenia projektowego.",
     "changes": [
       "Odbicie układu po sprawdzeniu nasłonecznienia i dostępu do drogi.",
@@ -114,99 +100,355 @@
     ]
   },
   "geometry": {
-    "functionalZones": {
-      "externalWall": 0.28,
-      "floors": [
-        [
+    "functionalZones": [
+      {
+        "rooms": [
+          {
+            "x": 0.28,
+            "y": 2.5,
+            "w": 4.8,
+            "d": 2.42,
+            "label": "Salon + kuchnia",
+            "type": "living",
+            "id": "r1",
+            "area": 11.62
+          },
+          {
+            "x": 5.2,
+            "y": 1.82,
+            "w": 3.12,
+            "d": 3.1,
+            "label": "Schody + wejście",
+            "type": "stairs",
+            "id": "r2",
+            "area": 9.67
+          },
           {
             "x": 0.28,
             "y": 0.28,
-            "w": 6.04,
-            "d": 6.44,
-            "label": "Salon + kuchnia",
-            "type": "living"
-          },
-          {
-            "x": 6.32,
-            "y": 0.28,
-            "w": 3.4,
-            "d": 2.38,
+            "w": 4.8,
+            "d": 2.1,
             "label": "Pokój / gabinet",
-            "type": "bed"
+            "type": "bed",
+            "id": "r3",
+            "area": 10.08
           },
           {
-            "x": 6.32,
-            "y": 2.66,
-            "w": 3.4,
-            "d": 1.8,
+            "x": 5.2,
+            "y": 0.28,
+            "w": 3.12,
+            "d": 1.42,
             "label": "Łazienka",
-            "type": "bath"
-          },
-          {
-            "x": 6.32,
-            "y": 4.47,
-            "w": 3.4,
-            "d": 2.25,
-            "label": "Schody / wejście",
-            "type": "stairs"
+            "type": "bath",
+            "id": "r4",
+            "area": 4.43
           }
         ],
-        [
+        "doors": [
           {
-            "x": 0.28,
-            "y": 0.28,
-            "w": 4.72,
-            "d": 2.42,
-            "label": "Pokój 1 / skosy",
-            "type": "bed"
+            "a": "r1",
+            "b": "r2",
+            "x": 5.14,
+            "y": 4.09,
+            "size": 0.8,
+            "vertical": true,
+            "passage": true
           },
           {
-            "x": 5,
-            "y": 0.28,
-            "w": 4.72,
-            "d": 2.42,
-            "label": "Pokój 2 / skosy",
-            "type": "bed"
+            "a": "r2",
+            "b": "r4",
+            "x": 5.28,
+            "y": 1.76,
+            "size": 0.8,
+            "vertical": false,
+            "passage": false
           },
           {
-            "x": 0.28,
-            "y": 2.7,
-            "w": 9.44,
-            "d": 1.6,
-            "label": "Hol",
-            "type": "hall"
+            "a": "r1",
+            "b": "r3",
+            "x": 4.25,
+            "y": 2.44,
+            "size": 0.8,
+            "vertical": false,
+            "passage": false
           },
           {
-            "x": 0.28,
-            "y": 4.3,
-            "w": 4.53,
-            "d": 2.42,
-            "label": "Pokój 3 / skosy",
-            "type": "bed"
-          },
-          {
-            "x": 4.81,
-            "y": 4.3,
-            "w": 2.08,
-            "d": 2.42,
-            "label": "Łazienka",
-            "type": "bath"
-          },
-          {
-            "x": 6.89,
-            "y": 4.3,
-            "w": 2.83,
-            "d": 2.42,
-            "label": "Schody",
-            "type": "stairs"
+            "a": "r2",
+            "x": 5.28,
+            "y": 5.06,
+            "size": 0.9,
+            "vertical": false
           }
-        ]
-      ]
-    },
-    "externalEnvelope": "10 × 7 m",
-    "footprintCalculation": "10 × 7 = 70 m²",
+        ],
+        "windows": [
+          {
+            "a": "r1",
+            "x": 0.4,
+            "y": 5.0600000000000005,
+            "size": 2.4,
+            "vertical": false
+          },
+          {
+            "a": "r3",
+            "x": 2.08,
+            "y": 0.14,
+            "size": 1.2,
+            "vertical": false
+          },
+          {
+            "a": "r4",
+            "x": 6.46,
+            "y": 0.14,
+            "size": 0.6,
+            "vertical": false
+          }
+        ],
+        "furniture": [
+          {
+            "x": 0.36,
+            "y": 2.58,
+            "w": 2.4,
+            "d": 0.6,
+            "kind": "kitchen",
+            "room": "r1"
+          },
+          {
+            "x": 0.36,
+            "y": 4.04,
+            "w": 1.8,
+            "d": 0.8,
+            "kind": "sofa",
+            "room": "r1"
+          },
+          {
+            "x": 2.86,
+            "y": 2.58,
+            "w": 1.1,
+            "d": 0.65,
+            "kind": "table",
+            "room": "r1"
+          },
+          {
+            "x": 6.28,
+            "y": 1.92,
+            "w": 2,
+            "d": 2.9,
+            "kind": "stairs",
+            "room": "r2"
+          },
+          {
+            "x": 1.98,
+            "y": 0.33,
+            "w": 1.4,
+            "d": 2,
+            "kind": "bed",
+            "room": "r3"
+          },
+          {
+            "x": 3.8,
+            "y": 0.36,
+            "w": 1.2,
+            "d": 0.6,
+            "kind": "wardrobe",
+            "room": "r3"
+          },
+          {
+            "x": 7.39,
+            "y": 0.36,
+            "w": 0.85,
+            "d": 0.85,
+            "kind": "shower",
+            "room": "r4"
+          },
+          {
+            "x": 6.69,
+            "y": 0.36,
+            "w": 0.4,
+            "d": 0.65,
+            "kind": "wc",
+            "room": "r4"
+          },
+          {
+            "x": 5.28,
+            "y": 0.36,
+            "w": 0.55,
+            "d": 0.4,
+            "kind": "basin",
+            "room": "r4"
+          }
+        ],
+        "level": 0,
+        "openingArea": 0
+      },
+      {
+        "rooms": [
+          {
+            "x": 0.28,
+            "y": 0.28,
+            "w": 4.8,
+            "d": 2.26,
+            "label": "Sypialnia 1",
+            "type": "bed",
+            "id": "r1",
+            "area": 10.85
+          },
+          {
+            "x": 0.28,
+            "y": 2.66,
+            "w": 4.8,
+            "d": 2.26,
+            "label": "Sypialnia 2",
+            "type": "bed",
+            "id": "r2",
+            "area": 10.85
+          },
+          {
+            "x": 5.2,
+            "y": 0.28,
+            "w": 3.12,
+            "d": 1.42,
+            "label": "Łazienka",
+            "type": "bath",
+            "id": "r3",
+            "area": 4.43
+          },
+          {
+            "x": 5.2,
+            "y": 1.82,
+            "w": 3.12,
+            "d": 3.1,
+            "label": "Schody + hol",
+            "type": "stairs",
+            "id": "r4",
+            "area": 9.67
+          }
+        ],
+        "doors": [
+          {
+            "a": "r4",
+            "b": "r3",
+            "x": 5.28,
+            "y": 1.76,
+            "size": 0.8,
+            "vertical": false,
+            "passage": false
+          },
+          {
+            "a": "r3",
+            "b": "r1",
+            "x": 5.14,
+            "y": 0.87,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r4",
+            "b": "r2",
+            "x": 5.14,
+            "y": 4.09,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          }
+        ],
+        "windows": [
+          {
+            "a": "r1",
+            "x": 2.08,
+            "y": 0.14,
+            "size": 1.2,
+            "vertical": false
+          },
+          {
+            "a": "r2",
+            "x": 0.4,
+            "y": 5.0600000000000005,
+            "size": 1.2,
+            "vertical": false
+          },
+          {
+            "a": "r3",
+            "x": 6.46,
+            "y": 0.14,
+            "size": 0.6,
+            "vertical": false
+          }
+        ],
+        "furniture": [
+          {
+            "x": 0.36,
+            "y": 0.36,
+            "w": 1.4,
+            "d": 2,
+            "kind": "bed",
+            "room": "r1"
+          },
+          {
+            "x": 3.8,
+            "y": 1.86,
+            "w": 1.2,
+            "d": 0.6,
+            "kind": "wardrobe",
+            "room": "r1"
+          },
+          {
+            "x": 0.36,
+            "y": 2.74,
+            "w": 1.4,
+            "d": 2,
+            "kind": "bed",
+            "room": "r2"
+          },
+          {
+            "x": 3.8,
+            "y": 2.74,
+            "w": 1.2,
+            "d": 0.6,
+            "kind": "wardrobe",
+            "room": "r2"
+          },
+          {
+            "x": 7.39,
+            "y": 0.36,
+            "w": 0.85,
+            "d": 0.85,
+            "kind": "shower",
+            "room": "r3"
+          },
+          {
+            "x": 6.69,
+            "y": 0.36,
+            "w": 0.4,
+            "d": 0.65,
+            "kind": "wc",
+            "room": "r3"
+          },
+          {
+            "x": 5.28,
+            "y": 0.36,
+            "w": 0.55,
+            "d": 0.4,
+            "kind": "basin",
+            "room": "r3"
+          },
+          {
+            "x": 6.28,
+            "y": 1.92,
+            "w": 2,
+            "d": 2.9,
+            "kind": "stairs",
+            "room": "r4"
+          }
+        ],
+        "level": 1,
+        "openingArea": 4
+      }
+    ],
+    "externalEnvelope": "8.6 × 5.2 m",
+    "footprintCalculation": "8.6 × 5.2 = 44.72 m²",
     "assumedExternalWall": ".28 m for feasibility envelope only",
-    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "usableAreaStatus": "Clear floor areas calculated from the shown rectangles; partitions excluded; upper 4m2 stair opening excluded. Not statutory usable area; attic slopes not deducted. All concepts stay below 70m2 even before slope deductions.",
     "professionalReview": false
   },
   "visuals": {
@@ -223,17 +465,17 @@
     ],
     "coordinationStatus": "Provisional AI concepts. Visual screening performed; geometry, dimensions, openings and room schedules still need coordinated architectural review. Not a CAD-derived image set.",
     "additionalViewPrompts": {
-      "garden": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX 70, 10 × 7 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "terrace": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX 70, 10 × 7 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "side": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX 70, 10 × 7 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "aerial": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX 70, 10 × 7 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "living": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX 70, 10 × 7 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "kitchen": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX 70, 10 × 7 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "bedroom": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX 70, 10 × 7 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
+      "garden": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX, 8.6 × 5.2 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "terrace": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX, 8.6 × 5.2 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "side": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX, 8.6 × 5.2 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "aerial": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX, 8.6 × 5.2 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "living": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX, 8.6 × 5.2 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "kitchen": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX, 8.6 × 5.2 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "bedroom": "Use public/images/houses/max-70/exterior.webp as the mandatory identity reference. Same MAX, 8.6 × 5.2 m, 2 storeys, Dwuspadowy, Naturalne drewno, grafitowa blacha i ciemna stolarka. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
     },
     "status": "Conceptual; not evidence of an engineering review",
-    "front": "Photorealistic architectural photograph. Concept MAX 70, external envelope 10m x 7m, ground floor and habitable attic, gable metal standing seam roof, Naturalne drewno, grafitowa blacha i ciemna stolarka. Polish meadow, daylight. Front left three quarter view. Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: trzy pokoje, łazienka i hol. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
-    "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same MAX 70 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
-    "plan": "Top down schematic floor plan for MAX 70, 10 x 7m external footprint, 2 levels. Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: trzy pokoje, łazienka i hol. Wariant 3–4 sypialni: czwarty pokój można przeznaczyć na gabinet. Poddasze wymaga sprawdzenia wysokości pod skosami. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
+    "front": "Photorealistic architectural photograph. Concept MAX, external envelope 8.6m x 5.2m, ground floor and habitable attic, gable metal standing seam roof, Naturalne drewno, grafitowa blacha i ciemna stolarka. Polish meadow, daylight. Front left three quarter view. Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: dwie sypialnie, łazienka i hol. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same MAX building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
+    "plan": "Top down schematic floor plan for MAX, 8.6 x 5.2m external footprint, 2 levels. Parter: salon z kuchnią, pokój, łazienka i schody. Poddasze: dwie sypialnie, łazienka i hol. Trzy pokoje sypialne: pokój na parterze można przeznaczyć na gabinet. Poddasze wymaga sprawdzenia wysokości pod skosami. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
   }
 }

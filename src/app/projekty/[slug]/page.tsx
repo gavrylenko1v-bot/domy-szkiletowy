@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { PlanViewer } from "@/components/plan-viewer";
 import { notFound } from "next/navigation";
 import { publishedHouses, disclaimer } from "@/content/houses";
 import { metadata, JsonLd } from "@/lib/seo";
@@ -25,7 +25,7 @@ export async function generateMetadata({
   return h
     ? metadata(
         `${h.name} — dom szkieletowy ${h.footprint} m² zabudowy`,
-        `${h.tagline} Koncepcja domu: ${h.bedrooms} ${h.bedrooms === 1 ? "sypialnia" : "sypialnie"}, ok. ${h.usable} m² powierzchni użytkowej. Sprawdź układ i zapytaj o indywidualną wycenę.`,
+        `${h.tagline} Koncepcja domu: ${h.bedrooms} ${h.bedrooms === 1 ? "sypialnia" : "sypialnie"}, ok. ${h.usable} m² podłóg netto. Sprawdź układ i zapytaj o indywidualną wycenę.`,
         `/projekty/${h.slug}`,
         h.image,
       )
@@ -42,7 +42,7 @@ export default async function Page({
   const details = houseDetails(h);
   const specs = [
     ["Powierzchnia zabudowy", `${h.footprint} m²`],
-    ["Powierzchnia użytkowa", `ok. ${h.usable} m²`],
+    ["Powierzchnia podłóg netto", `ok. ${h.usable} m²`],
     ["Wymiary zewnętrzne", `${h.width} × ${h.depth} m`],
     ["Sypialnie", h.bedrooms],
     ["Łazienki", h.bathrooms],
@@ -101,7 +101,7 @@ export default async function Page({
           images={[
             { src: h.image, alt: `${h.name} — widok główny, koncepcja` },
             { src: h.alternate, alt: `${h.name} — drugi widok koncepcyjny` },
-            ...[
+            ...(h.roof === "Płaski" ? [] : [
               ["garden", "widok od ogrodu"],
               ["terrace", "widok z tarasu"],
               ["side", "elewacja boczna"],
@@ -109,10 +109,10 @@ export default async function Page({
               ["living", "wnętrze salonu"],
               ["kitchen", "wnętrze kuchni"],
               ["bedroom", "wnętrze sypialni"],
-            ].map(([file, label]) => ({src: `/images/houses/${h.slug}/${file}.webp`, alt: `${h.name} — ${label}, wizualizacja koncepcyjna`})),
+            ]).map(([file, label]) => ({src: `/images/houses/${h.slug}/${file}.webp`, alt: `${h.name} — ${label}, wizualizacja koncepcyjna`})),
             {
               src: h.plan,
-              alt: `${h.name} — schemat stref, nie rzut budowlany`,
+              alt: `${h.name} — rzut koncepcyjny z wymiarami`,
             },
           ]}
         />
@@ -178,42 +178,32 @@ export default async function Page({
               <span>ma znaczenie.</span>
             </h2>
             <p>{h.layout}</p>
+            <p className="fine">Wizualizacje pokazują charakter architektury. Rzut jest propozycją funkcjonalną; dokładne rozmieszczenie otworów należy skoordynować w dokumentacji.</p>
             <p className="notice">
-              To schemat stref w obrysie {h.width} × {h.depth} m. Nie
-              przedstawia zatwierdzonych wymiarów pokoi, okien, drzwi ani
-              instalacji. Schody i skosy wymagają indywidualnego opracowania.
+              Rzut koncepcyjny: ściany, otwory, wyposażenie i pola podłóg z jednego modelu geometrycznego.
+              Powierzchnie netto nie są obmiarem użytkowym według normy; na poddaszu nie odjęto skosów.
+              Dokumentację do budowy przygotowuje uprawniony projektant.
             </p>
-            <a
-              href={h.plan}
-              target="_blank"
-              rel="noopener"
-              className="text-link"
-            >
-              Otwórz schemat w pełnym rozmiarze <ArrowUpRight size={17} />
+            <a href={h.plan} target="_blank" rel="noopener" className="text-link">
+              Pobierz komplet rzutów SVG <ArrowUpRight size={17} />
             </a>
           </div>
           <div className="plan-image">
-            <Image
-              src={h.plan}
-              alt={`Schemat koncepcyjny stref ${h.name}, obrys ${h.width} na ${h.depth} m`}
-              width={850}
-              height={h.floors === 2 ? 1250 : 730}
-              sizes="(max-width: 800px) 100vw, 50vw"
-            />
+            <PlanViewer name={h.name} slug={h.slug} floors={h.floors} />
           </div>
         </div>
       </section>
       <section className="shell room-schedule" aria-labelledby="room-heading">
         <span className="eyebrow">PROGRAM POWIERZCHNIOWY</span>
         <h2 id="room-heading">Miejsce na codzienność.</h2>
-        <p>Wstępny podział zakładanej powierzchni użytkowej. To bilans do dalszego projektowania, a nie obmiar pól na schemacie. Wartości uwzględniają założenia dotyczące przegród i skosów; wymagają weryfikacji w dokumentacji.</p>
+        <p>Powierzchnie wynikają z wymiarów w świetle ścian pokazanych na rzucie. Suma nie obejmuje ścian i otworu schodowego. Na poddaszu podano pola podłóg przed korektą za skosy; to nie jest obmiar powierzchni użytkowej według normy.</p>
         <table>
-          <caption>{h.name} — orientacyjny bilans pomieszczeń</caption>
+          <caption>{h.name} — bilans podłóg netto</caption>
           <thead><tr><th scope="col">Pomieszczenie / strefa</th><th scope="col">Poziom</th><th scope="col">Powierzchnia</th></tr></thead>
           <tbody>{details.rooms.map((r, i) => <tr key={i}><th scope="row">{r.name}</th><td>{r.level === 0 ? "Parter" : "Poddasze"}</td><td>{areaFormat(r.area)} m²</td></tr>)}</tbody>
-          <tfoot><tr><th colSpan={2} scope="row">Razem — użytkowa, orientacyjnie</th><td>{areaFormat(details.rooms.reduce((sum,r) => sum + r.area, 0))} m²</td></tr></tfoot>
+          <tfoot><tr><th colSpan={2} scope="row">Razem — podłogi netto</th><td>{areaFormat(details.rooms.reduce((sum,r) => sum + r.area, 0))} m²</td></tr></tfoot>
         </table>
-        <p className="notice">Zabudowy: {h.footprint} m² — rzut zewnętrznego obrysu. Całkowita: ok. {details.gross} m² — wstępna suma obrysów {h.floors === 1 ? "kondygnacji" : "obu kondygnacji"}, przed szczegółowym rozliczeniem otworów i skosów. Użytkowa: ok. {h.usable} m² — wnętrze po uwzględnieniu przegród i przyjętej metody pomiaru. Taras nie wchodzi do tych wartości.</p>
+        <p className="notice">Zabudowy: {h.footprint} m² — zewnętrzny obrys {h.width} × {h.depth} m. Podłogi netto: {areaFormat(h.usable)} m² — suma pomieszczeń po odjęciu ścian i otworu schodowego. Taras rozlicza się oddzielnie. Powierzchnię użytkową z uwzględnieniem skosów określi projektant.</p>
       </section>
       <section className="shell project-options">
         <span className="eyebrow">MATERIAŁY I MOŻLIWOŚCI</span>

@@ -2,10 +2,10 @@
   "name": "MINI 35",
   "slug": "mini-35",
   "tagline": "Mały dom. Wielka swoboda.",
-  "footprint": 35,
-  "usable": 27,
-  "width": 7,
-  "depth": 5,
+  "footprint": 43.2,
+  "usable": 35.11,
+  "width": 7.5,
+  "depth": 5.76,
   "floors": 1,
   "bedrooms": 1,
   "bathrooms": 1,
@@ -16,7 +16,8 @@
   "note": "Sypialnia jest kompaktowa; miejsce do pracy przewidziano w strefie dziennej.",
   "id": "DOM-01",
   "roof": "Dwuspadowy",
-  "description": "MINI 35 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 35 m². Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
+  "terrace": false,
+  "description": "MINI 35 to koncepcja drewnianego domu szkieletowego o powierzchni zabudowy 43.2 m². Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. Zwarta bryła pozwala świadomie zaplanować przestrzeń, a naturalne materiały tworzą spokojne tło codzienności. Rozmieszczenie okien i orientację strefy dziennej należy dopasować do konkretnej działki.",
   "benefits": [
     "Zwarta, czytelna bryła",
     "Naturalne materiały elewacyjne",
@@ -31,31 +32,26 @@
   "preliminaryProgram": {
     "rooms": [
       {
-        "name": "Salon z aneksem kuchennym",
-        "area": 15,
-        "level": 0
-      },
-      {
-        "name": "Sypialnia",
-        "area": 7,
+        "name": "Salon + kuchnia",
+        "area": 20.38,
         "level": 0
       },
       {
         "name": "Łazienka",
-        "area": 3,
+        "area": 4.78,
         "level": 0
       },
       {
-        "name": "Wejście i przechowywanie",
-        "area": 2,
+        "name": "Sypialnia",
+        "area": 9.95,
         "level": 0
       }
     ],
-    "gross": 35,
+    "gross": 43.199999999999996,
     "roomCount": 2,
     "structure": "Szkielet drewniany; przekroje, usztywnienia i układ warstw dobiera konstruktor.",
     "roofPitch": "35° — założenie koncepcyjne",
-    "terrace": "Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
+    "terrace": "Opcjonalny, do uzgodnienia. Przy strefie dziennej, poza obrysem domu. Kierunek i zadaszenie do dopasowania do działki.",
     "glazing": "Większe przeszklenie przy salonie; oddzielne okna w sypialniach. Ochronę przed przegrzewaniem i widoki należy sprawdzić na działce.",
     "changes": [
       "Odbicie układu po sprawdzeniu nasłonecznienia i dostępu do drogi.",
@@ -79,41 +75,164 @@
     ]
   },
   "geometry": {
-    "functionalZones": {
-      "externalWall": 0.28,
-      "floors": [
-        [
+    "functionalZones": [
+      {
+        "rooms": [
           {
             "x": 0.28,
             "y": 0.28,
-            "w": 3.93,
-            "d": 4.44,
-            "label": "Salon + aneks",
-            "type": "living"
+            "w": 3.92,
+            "d": 5.2,
+            "label": "Salon + kuchnia",
+            "type": "living",
+            "id": "r1",
+            "area": 20.38
           },
           {
-            "x": 4.21,
+            "x": 4.32,
             "y": 0.28,
-            "w": 2.51,
-            "d": 1.6,
+            "w": 2.9,
+            "d": 1.65,
             "label": "Łazienka",
-            "type": "bath"
+            "type": "bath",
+            "id": "r2",
+            "area": 4.78
           },
           {
-            "x": 4.21,
-            "y": 1.88,
-            "w": 2.51,
-            "d": 2.84,
+            "x": 4.32,
+            "y": 2.05,
+            "w": 2.9,
+            "d": 3.43,
             "label": "Sypialnia",
-            "type": "bed"
+            "type": "bed",
+            "id": "r3",
+            "area": 9.95
           }
-        ]
-      ]
-    },
-    "externalEnvelope": "7 × 5 m",
-    "footprintCalculation": "7 × 5 = 35 m²",
+        ],
+        "doors": [
+          {
+            "a": "r1",
+            "b": "r2",
+            "x": 4.26,
+            "y": 1.1,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r1",
+            "b": "r3",
+            "x": 4.26,
+            "y": 4.65,
+            "size": 0.8,
+            "vertical": true,
+            "passage": false
+          },
+          {
+            "a": "r1",
+            "x": 3.22,
+            "y": 5.62,
+            "size": 0.9,
+            "vertical": false
+          }
+        ],
+        "windows": [
+          {
+            "a": "r1",
+            "x": 1.04,
+            "y": 0.14,
+            "size": 2.4,
+            "vertical": false
+          },
+          {
+            "a": "r2",
+            "x": 5.47,
+            "y": 0.14,
+            "size": 0.6,
+            "vertical": false
+          },
+          {
+            "a": "r3",
+            "x": 4.44,
+            "y": 5.62,
+            "size": 1.2,
+            "vertical": false
+          }
+        ],
+        "furniture": [
+          {
+            "x": 1.72,
+            "y": 0.36,
+            "w": 2.4,
+            "d": 0.6,
+            "kind": "kitchen",
+            "room": "r1"
+          },
+          {
+            "x": 0.36,
+            "y": 4.6,
+            "w": 1.8,
+            "d": 0.8,
+            "kind": "sofa",
+            "room": "r1"
+          },
+          {
+            "x": 0.36,
+            "y": 0.36,
+            "w": 1.1,
+            "d": 0.65,
+            "kind": "table",
+            "room": "r1"
+          },
+          {
+            "x": 6.29,
+            "y": 0.36,
+            "w": 0.85,
+            "d": 0.85,
+            "kind": "shower",
+            "room": "r2"
+          },
+          {
+            "x": 5.59,
+            "y": 0.36,
+            "w": 0.4,
+            "d": 0.65,
+            "kind": "wc",
+            "room": "r2"
+          },
+          {
+            "x": 4.4,
+            "y": 0.36,
+            "w": 0.55,
+            "d": 0.4,
+            "kind": "basin",
+            "room": "r2"
+          },
+          {
+            "x": 5.74,
+            "y": 2.13,
+            "w": 1.4,
+            "d": 2,
+            "kind": "bed",
+            "room": "r3"
+          },
+          {
+            "x": 4.4,
+            "y": 2.13,
+            "w": 1.2,
+            "d": 0.6,
+            "kind": "wardrobe",
+            "room": "r3"
+          }
+        ],
+        "level": 0,
+        "openingArea": 0
+      }
+    ],
+    "externalEnvelope": "7.5 × 5.76 m",
+    "footprintCalculation": "7.5 × 5.76 = 43.2 m²",
     "assumedExternalWall": ".28 m for feasibility envelope only",
-    "usableAreaStatus": "Preliminary estimate; loft slopes, stair openings and partitions require professional measurement",
+    "usableAreaStatus": "Clear floor areas calculated from the shown rectangles; partitions excluded; upper 4m2 stair opening excluded. Not statutory usable area; attic slopes not deducted. All concepts stay below 70m2 even before slope deductions.",
     "professionalReview": false
   },
   "visuals": {
@@ -130,17 +249,17 @@
     ],
     "coordinationStatus": "Provisional AI concepts. Visual screening performed; geometry, dimensions, openings and room schedules still need coordinated architectural review. Not a CAD-derived image set.",
     "additionalViewPrompts": {
-      "garden": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "terrace": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "side": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "aerial": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "living": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "kitchen": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
-      "bedroom": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7 × 5 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
+      "garden": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7.5 × 5.76 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Rear three-quarter garden elevation, eye level. Preserve the reference roof, volumes, materials and openings; no new building wings. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "terrace": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7.5 × 5.76 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Eye level from existing terrace along the original front facade; preserve door and window positions. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "side": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7.5 × 5.76 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Side elevation, nearly orthogonal, with a small portion of the front visible for identification. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "aerial": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7.5 × 5.76 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Oblique aerial from the same front corner as reference, 12 metres high. Preserve roof geometry, skylights, chimney and terrace. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "living": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7.5 × 5.76 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Compact living room facing the existing largest glazed opening; oak floor, linen sofa, warm white walls. No double-height space. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "kitchen": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7.5 × 5.76 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Compact linear oak kitchenette, small dining table, same warm white walls and oak floor. No oversized island or extra windows. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval.",
+      "bedroom": "Use public/images/houses/mini-35/exterior.webp as the mandatory identity reference. Same MINI 35, 7.5 × 5.76 m, 1 storeys, Dwuspadowy, Pionowa deska modrzewiowa i grafitowa stolarka. Compact bedroom with wardrobe, matching the facade window proportions. For attic: sloping ceiling, no invented triangular glazing or balcony. Polish woodland daylight, photorealistic concept visualization, realistic compact scale, no text, logos or watermarks. Cross-check against coordinated plans before approval."
     },
     "status": "Conceptual; not evidence of an engineering review",
-    "front": "Photorealistic architectural photograph. Concept MINI 35, external envelope 7m x 5m, single storey, gable metal standing seam roof, Pionowa deska modrzewiowa i grafitowa stolarka. Polish meadow, daylight. Front left three quarter view. Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
+    "front": "Photorealistic architectural photograph. Concept MINI 35, external envelope 7.5m x 5.76m, single storey, gable metal standing seam roof, Pionowa deska modrzewiowa i grafitowa stolarka. Polish meadow, daylight. Front left three quarter view. Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. No text, no logos. Fix a window and door schedule before production; do not invent additional volumes.",
     "alternate": "Use the approved front image as a mandatory identity reference. Exactly the same MINI 35 building, roof pitch, dimensions, materials, door and window positions. Rear right three quarter view, eye level, Polish meadow, daylight. Do not mirror the building or move windows.",
-    "plan": "Top down schematic floor plan for MINI 35, 7 x 5m external footprint, 1 levels. Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. Sypialnia jest kompaktowa; miejsce do pracy przewidziano w strefie dziennej. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
+    "plan": "Top down schematic floor plan for MINI 35, 7.5 x 5.76m external footprint, 1 levels. Strefa dzienna z aneksem, kompaktowa sypialnia, łazienka z prysznicem oraz wejście z miejscem na szafę. Sypialnia jest kompaktowa; miejsce do pracy przewidziano w strefie dziennej. Before producing a final plan, architect must resolve doors, window schedule, stairs and clearances; match the approved exterior. Label as conceptual."
   }
 }
