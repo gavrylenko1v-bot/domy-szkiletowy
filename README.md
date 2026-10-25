@@ -1,127 +1,64 @@
-# VERTEX I.S.O — сайт каркасных домов для Польши
+# VERTEX I.S.O
 
-Next.js App Router, React, TypeScript, Tailwind CSS 4. Польскоязычный сайт, структурированный каталог, серверные заявки. VERTEX I.S.O — утверждённое название бренда. Исходный репозиторий был пуст.
+Polish timber-frame house catalogue. Existing Next.js 16 App Router repository and existing Vercel address are retained: https://domy-szkiletowy.vercel.app.
 
-## Запуск
+## Development and checks
 
-Требуется Node.js 24 LTS (проверено на 24.19.0) и npm 11.
+Node.js 24 LTS, npm 11. Use the committed lockfile.
 
-```bash
-cd /workspace/domy-szkiletowy
+```sh
 npm ci
 npm run dev
-```
-
-Для production:
-
-```bash
 npm run typecheck
 npm run lint
 npm test
 npm run build
-npm run start
-```
-
-В среде с недоступным домашним каталогом используйте `npm --cache /workspace/.npm-cache ci`. Не создавайте отдельный Git worktree: облачная задача уже изолирована.
-
-## Что реализовано
-
-- Главная: архитектурная подача, популярные дома, технология, этапы, комплектации, калькулятор-заявка, FAQ.
-- `/projekty`: 10 концепций, фильтры по площади **застройки**, спальням, этажности, крыше и стилю; сортировка, сброс, пустое состояние.
-- `/projekty/[slug]`: галерея с горизонтальным свайпом и клавиатурой, параметры, описание, схема, запрос стоимости, похожие дома.
-- `/technologia`, `/o-nas`, `/kontakt`, `/faq`, `/polityka-prywatnosci`, `/polityka-cookies`.
-- `/realizacje` подготовлен, но отвечает 404, отсутствует в меню и sitemap. Вымышленных построенных объектов нет.
-- `/api/leads`: Resend, проверка полей, проверка Origin, ограничение размера, honeypot, согласие, распределённые лимиты через Upstash Redis, idempotency отправки. Персональные данные не пишутся в консоль.
-- Уникальные метаданные, canonical, Open Graph, FAQ и breadcrumbs JSON-LD; sitemap и robots.
-- Мобильное меню, крупные поля, responsive-сетка, sticky-запрос на странице дома с отключением в зоне формы, reduced motion, skip link.
-
-## Контент и будущая CMS
-
-- `src/content/site.ts`: название, юридические данные, телефон, email, зона обслуживания, описание, комплектации, этапы, FAQ.
-- `src/content/houses.ts`: типизированный каталог. `published:false` скрывает проект из каталога, маршрутов и sitemap. ID используется сервером для получения названия — клиент не может подменить его произвольным названием.
-- `public/images/houses/<slug>/`: `exterior.webp`, `alternate.webp`, `garden.webp`, `terrace.webp`, `side.webp`, `aerial.webp`, `living.webp`, `kitchen.webp`, `bedroom.webp`, `plan.svg`; оригинальные SVG-заглушки сохранены как резерв. Hero — `public/images/hero.webp`.
-- `docs/passports/<slug>.json`: паспорт, предпосылки геометрии, планировочные зоны, отдельные промпты для каждого вида. Генератор: `scripts/prepare-content.ts`, `scripts/plan-geometry.ts`.
-- `src/content/realizations.ts`: схема будущих **реальных** объектов с разрешением владельца на публикацию.
-
-Страницы читают структурированные данные, а не содержат жёстко зашитые копии карточек. Для CMS замените источник `publishedHouses` серверным адаптером и сохраните тип `House`; секреты CMS доступны только серверу. После изменения статического каталога пересоберите приложение.
-
-### Изображения и архитектура
-
-Девять оригинальных AI-рендеров для каждого дома и десять SVG-схем: 100 изображений в галереях. Добавлены виды сада, террасы, бокового фасада, сверху и три интерьера. Рендеры — **концептуальные**, а не фотографии готовых объектов. Вторые виды генерировались по референсу первого. Перед коммерческим использованием архитектор должен сверить оконные и дверные ведомости, уклоны крыши и геометрию: генерация не гарантирует точность CAD-модели.
-
-Схемы сохраняют внешний обрис: ширина × глубина = площадь застройки. Стены 280 мм — допущение для предварительного размещения зон, **не техническая спецификация**. Полезная площадь — отдельная предварительная оценка с учётом перегородок и скосов; сумма зон SVG не является обмером полезной площади. Окна, двери, проходы, лестницы, высоты мансарды, конструкция и установки требуют профессионального проекта. Это не документация для строительства.
-
-NATURA 45: вторая спальня рассчитана на одного человека или кабинет. RODZINNY 65: два компактных детских помещения. STODOŁA 60: 2–3 спальни, без двусветной гостиной в варианте 3 спален. MAX 70: 3–4 спальни с возможностью кабинета. Изменения и ограничения описаны в каждой концепции.
-
-`npm run prepare:content` повторно создаёт SVG-схемы, резервные иллюстрации и паспорта, **не перезаписывая WebP-рендеры**. Это авторский инструмент наполнения, не установка зависимостей. Редактируйте генератор, если меняете схемы: ручные изменения сгенерированных SVG при повторном запуске будут заменены.
-
-Для замены изображения положите собственный WebP/AVIF в папку дома, обновите путь в каталоге и alt-текст при необходимости. Не используйте изображения со сторонних сайтов без прав. Изображения проходят через `next/image`, локальные SVG схемы не растрируются.
-
-## Настройка отправки
-
-Скопируйте `.env.example` в `.env.local` или задайте значения в секретах хостинга. Не передавайте реальные ключи в чат и не коммитьте их.
-
-| Переменная                 | Назначение                                                                                            |
-| -------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `NEXT_PUBLIC_SITE_URL`     | Точный публичный origin HTTPS без завершающего слеша; локально `http://localhost:3000`                |
-| `SITE_PUBLISHED`           | По умолчанию false: noindex и запрет robots; true только после финальной проверки                     |
-| `RESEND_API_KEY`           | Серверный API-ключ Resend; исходящие запросы к `api.resend.com`                                       |
-| `LEADS_FROM_EMAIL`         | Отправитель на подтверждённом в Resend домене                                                         |
-| `LEADS_TO_EMAIL`           | Реальный адрес получения заявок                                                                       |
-| `UPSTASH_REDIS_REST_URL`   | HTTPS REST endpoint вашего Upstash Redis                                                              |
-| `UPSTASH_REDIS_REST_TOKEN` | Серверный REST token                                                                                  |
-| `TRUST_PROXY`              | true только если ваш proxy перезаписывает X-Forwarded-For и не допускает прямых запросов к приложению |
-
-В production без почты или общего Redis отправка возвращает 503. В dev без Redis действует локальный ограничитель. Лимит — пять попыток за 15 минут; ключ — SHA-256 адреса из доверенного proxy. Без `TRUST_PROXY=true` используется общий bucket, чтобы не доверять поддельному заголовку; это ограничивает всех посетителей вместе. Настройте proxy перед запуском. Redis хранит только счётчик с TTL, а не содержимое заявки.
-
-Origin должен совпадать с `NEXT_PUBLIC_SITE_URL`; при локальных тестах используйте одинаковое имя хоста. Проверьте HTTPS, верификацию домена, SPF/DKIM и доставку настоящего тестового письма. Успех означает принятие письма API, а не гарантированное попадание во входящие. Ошибка/таймаут не отображается как успех. Повтор одной и той же заявки использует тот же ключ идемпотентности в пределах срока, предоставляемого Resend.
-
-Нет базы заявок: содержание передаётся почтовому провайдеру и на настроенную почту. Срок хранения переписки и договоры с поставщиками устанавливает оператор.
-
-## Тесты
-
-```bash
-npm test
-npx playwright install chromium
-npm run build
 npm run test:e2e
 ```
 
-Playwright проверяет 18 публичных страниц в desktop и mobile Chromium: H1, уникальные title, canonical и OG, отсутствие горизонтального переполнения и сломанных изображений; фильтры, сортировку, меню, галерею, FAQ, 404 и отказ формы при неподключённой интеграции. Снимки — `test-results/`. Серверные тесты проверяют геометрию и файлы каталога, валидацию, лимиты и ответы API. Положительный ответ Resend проверяется **моком**, не настоящей отправкой.
+E2E uses a production build. Set `CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium` when a system Chromium is installed; otherwise use Playwright's normal browser setup. The test web server sets a local API Origin; generated canonical URLs default to the retained production address. `NEXT_PUBLIC_SITE_URL` overrides that address at build time.
 
-Для подготовленного облачного Chromium можно задать `FONTCONFIG_PATH=/tmp/fonts XDG_CACHE_HOME=/workspace/.cache CHROMIUM_EXECUTABLE_PATH=/tmp/chromium npm run test:e2e`. Этот бинарный файл не гарантированно сохраняется после перезапуска; инструкции среды описывают его восстановление. Публичный сайт не зависит от браузера для тестирования.
+## Structure
 
-## Перед публикацией
+- `src/content/site.ts`: owner-supplied email, NIP and Wrocław service area; legal name, address and phone remain unconfirmed.
+- `src/content/houses.ts`: 10 published concepts. Existing slugs are preserved, including when the model name or dimensions change.
+- `src/content/floor-plans.ts`: one source for scaled clear room dimensions, doors, windows, furniture, stair openings and area arithmetic.
+- `scripts/plan-geometry.ts`: deterministic SVG renderer. `npm run prepare:content` refreshes plans and JSON passports; WebP assets are retained.
+- `src/content/house-details.ts`: room schedule derived from that same geometry, not an independent budget.
+- `public/images/houses/<slug>/plan.svg`: all floors; `plan-0.svg` and `plan-1.svg`: individual levels.
+- `docs/passports/`: geometry, media list, prompts, architectural assumptions.
+- `docs/media-manifest.json`: active image/plan inventory with SHA-256 hashes.
 
-1. Заполнить юридические и контактные данные компании в `site.ts`: юридическое лицо, NIP, адрес, реальные контакты, территорию и перечень услуг. Не утверждать проектирование, пока услуга не подтверждена.
-2. Получить архитектурную проверку всех концепций и согласовать экстерьеры, планы, помещения, мансарды и допущения площади. Визуализации не заменяют проект.
-3. Настроить Resend/Redis, proxy, домен и HTTPS. Провести реальную отправку с согласия владельца тестового адреса, проверить получение и ответы на ошибки.
-4. Юристу завершить документы: администратор, сроки хранения, правовые основания, обработчики и международные передачи. Текущие страницы — явно помеченные проекты документов.
-5. Подтвердить контент, изображения и метаданные. Настроить `NEXT_PUBLIC_SITE_URL`, затем `SITE_PUBLISHED=true`, пересобрать. До этого сайт намеренно закрыт от индексации; sitemap пуст.
-6. Развернуть на Vercel или Node.js-хостинге, поддерживающем Next.js и серверные маршруты. Static export здесь не подходит. Запуск: `npm ci`, `npm run build`, `npm run start`. Разрешить исходящий HTTPS к Resend и своему Redis, не публиковать `.env.local`.
-7. После деплоя повторить маршруты и формы, проверить robots/sitemap/canonical и Core Web Vitals на реальном домене. Lighthouse и полевые CWV в этой среде не измерялись.
+Home includes projects, benefits, technology, process, packages, concept gallery, FAQ and enquiry. Catalogue filters total net floor area, rooms, floors, roof, terrace and style. Galleries and vector plans have keyboard-accessible full-screen dialogs. `/realizacje` intentionally returns 404: no completed buildings have been verified.
 
-Аналитика, рекламные pixels и необязательные cookies не подключены. Если добавите их, сначала реализуйте управление согласиями с блокировкой скриптов до согласия и возможностью отзыва. Социальные иконки, карты, фиктивные отзывы, цены и показатели опыта не добавлены.
+## Areas and architecture
 
-Референсные сайты из задания не исследовались в браузере при проектировании; дизайн и тексты оригинальные. Публикация сайта и push исходного кода не выполняются автоматически.
+The owner clarified **70 m² maximum total usable area across all floors**. All concepts now stay below 70 m² even when adding their entire clear floor areas before deductions for attic slopes. Ground-floor footprint is displayed separately. Do not confuse the model number or footprint with usable area.
 
-## Просмотр сайта после загрузки в GitHub
+The website reports **net floor area**, calculated from clear room rectangles, with exterior/partition walls excluded and a 4 m² upper stair opening excluded. It does not claim a statutory usable-area measurement. Attic height, roof slopes, stairs, structural design, services, daylight and building regulations require professional verification. The assumptions are 280 mm external walls and 120 mm partitions, not a construction specification.
 
-На своём компьютере установите Node.js версии из `.nvmrc`, затем:
+Original AI visualizations describe architectural character. They are not CAD-derived and do not certify exact alignment of every opening with the new plans. OPTIMA 70 has a flat-roof proposal and uses only its two new flat-roof views, keeping the older pitched-roof pictures out of that gallery. Other galleries retain their original 9 concept renders. Room plans are expressly labelled concepts, not construction documentation.
 
-```bash
-git clone https://github.com/gavrylenko1v-bot/domy-szkiletowy.git
-cd domy-szkiletowy
-npm ci
-npm run dev
-```
+## Enquiries
 
-Откройте в браузере адрес `http://localhost:3000`. Это локальный просмотр; публичный домен появится после отдельного развёртывания на хостинге. Инструкции по production и переменным окружения приведены выше.
+Server endpoint `/api/leads` validates input and project IDs, checks Origin, caps body size, rejects a honeypot, rate limits using Upstash and uses Resend idempotency keys. A success message is returned only after the email provider acknowledges acceptance; it does not guarantee inbox delivery. Personal data is not logged by the application.
 
-SVG-файлы фирменного стиля находятся в `public/brand/`. Версии для светлого и тёмного фона, знак и favicon описаны в `docs/BRAND.md`.
+Copy `.env.example` to `.env.local` for development or set variables in the **existing** Vercel project. Never commit real keys.
 
-## Дополнительный аудит и доработки
+- `NEXT_PUBLIC_SITE_URL=https://domy-szkiletowy.vercel.app`
+- `RESEND_API_KEY`: server key from Resend.
+- `LEADS_FROM_EMAIL`: sender on a domain verified in Resend. A Gmail contact address does not establish a verified sender domain.
+- `LEADS_TO_EMAIL=vertex7706@gmail.com`: confirmed contact address; set this only in hosting configuration.
+- `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`: production shared rate limiter.
+- `TRUST_PROXY=true` only if the hosting proxy overwrites forwarded IP headers and clients cannot reach the server directly.
+- `SITE_PUBLISHED=true`: enables indexing and populated sitemap. The existing safe default remains noindex while legal/architectural content is being finalized.
 
-Сводка изменений, таблица 10 домов, ограничения архитектурной проработки и результаты проверок: `docs/AUDIT-2026-10-25.md`. Таблицы помещений на страницах читаются из `src/content/house-details.ts`; их суммы проверяются тестом. Это предварительный баланс полезной площади, а не обмер зон SVG.
+Without mail/Redis, production returns 503 and displays an honest failure. The confirmed contact email is available as a direct `mailto:` link. Positive provider behavior is tested with a mock; no real email delivery has been verified.
 
-Галерея открывается в нативном модальном `dialog`, поддерживает стрелки, Home/End, Escape и возвращает фокус. Локальные шрифты Manrope и Inter и их лицензии находятся в `public/fonts`; сетевой запрос к шрифтовому провайдеру не требуется.
+## Existing Vercel deployment
+
+Push the reviewed commits to the linked GitHub `main` branch. The existing integration updates the existing Vercel project and address; do not create a second project. Check the Vercel status for that exact commit. If necessary, open Vercel → existing `domy-szkiletowy` project → Settings → Environment Variables, add the values above, then Deployments → latest deployment → Redeploy.
+
+Before enabling lead intake/indexing: complete legal entity/address, correct the owner's supplied NIP checksum, finish privacy retention/provider terms and obtain architectural coordination. NIP `8961975715` is stored as explicitly reconfirmed by the owner; it fails the Polish checksum and has not been presented as registry-verified.
+
+See [current architectural assumptions](docs/ARCHITECTURE.md), [brand](docs/BRAND.md), [validation](docs/VALIDATION.md) and [release audit](docs/RELEASE-2026-10-25.md).

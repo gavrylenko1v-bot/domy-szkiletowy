@@ -1,15 +1,14 @@
-# Validation notes
+# Validation — 25 October 2026, current release
 
-Final executed checks on 2026-10-25: `npm ci`, TypeScript, ESLint (zero warnings), production build, 4 node:test cases, and 12 Playwright tests passed. Browser tests cover 18 pages on each of two viewport sizes. The production dependency audit reported zero vulnerabilities. Commands are in README.
+- npm lockfile install completed on Node 24.19.0.
+- TypeScript: passed. ESLint: passed. `git diff --check`: passed.
+- Next.js production build: passed, 25 generated route/metadata entries. 18 public content pages were visited individually.
+- Node tests: **5 passed**, covering catalogue, area arithmetic <=70 m² across floors, fixtures, furnished room/door intersections, stair alignment, input validation, rate limits and provider acknowledgement.
+- Playwright with system Chromium: **15 passed, 1 intentional skip**. The duplicate mobile width sweep is skipped because desktop Chromium tests every requested width. 360, 390, 430, 768, 1024, 1440 and 1920 px were checked for overflow and readable text on home, catalogue, representative projects and contact.
+- All 18 public routes were checked on desktop/mobile for unique metadata, H1, valid local images, internal links and anchors. Interaction tests cover area/rooms/roof/terrace/floor filtering, sort/reset/empty state, form error without fake success, gallery navigation/full screen, floor-plan tabs/zoom/focus restoration, FAQ, mobile navigation and 404s.
+- axe-core: **37 runs, 0 violations** for selected WCAG 2 A/AA and 2.1 AA rules: 18 pages at 390 and 1440 px, plus the plan dialog. Automated checks do not certify full accessibility.
+- `SITE_PUBLISHED=true` SEO configuration: 18 sitemap entries with the retained Vercel origin; robots references the correct sitemap. Default draft/noindex behavior is preserved.
+- Production API success is mocked with synthetic addresses. Live email/Redis connectivity and inbox deliverability are not verified because provider configuration is absent. No real email was sent.
+- Field Core Web Vitals, real Safari/iPhone behavior, final legal completeness, building regulations and architectural cross-view coordination are not established by these checks.
 
-- Dependency installation uses the committed npm lockfile (`npm ci`).
-- TypeScript, ESLint, production build and node:test are executed in the cloud machine.
-- Browser suite covers all 18 public routes at desktop and iPhone 13 viewport sizes; it checks rendering, images, horizontal overflow, metadata and interactive scenarios.
-- Browser testing here uses Chromium from `@sparticuz/chromium` 153.0.0 (bundled npm artifact with lockfile integrity). The standard Playwright download endpoint was denied by the environment's egress policy; TLS/checksum verification was not disabled. Runtime browser files are extracted into `/tmp` from the retained `/workspace/browser-tools` package.
-- The positive email path is tested with synthetic `.invalid` addresses and a mocked Resend response. No real email was sent; provider credentials and recipient are absent.
-- Live Redis connectivity, deliverability, public hosting, field Core Web Vitals, legal adequacy and professional architectural accuracy are not validated by these tests.
-- `SITE_PUBLISHED=false` deliberately prevents indexing. A published sitemap must be checked again after setting the real site URL and enabling indexing.
-- CI workflow is supplied for GitHub Actions; it has not executed on GitHub as part of this task.
-- ESLint 9 is used for compatibility with the React, accessibility and import plugins bundled by eslint-config-next; ESLint 10 currently conflicts with their peer ranges.
-
-VERTEX I.S.O update: approved brand in SVG lockups, favicon, header, mobile menu, footer and SEO titles. Added audit of internal links and anchors, brand assets and metadata across all public pages. Re-ran TypeScript, lint, node:test, production build and all 12 desktop/mobile browser tests successfully. Polish UI copy reviewed; no customer testimonials, completed work, certifications, prices or guarantees were invented.
+Existing GitHub main had a successful Vercel deployment status before this release. Exact release deployment verification is reported in the task handoff and GitHub commit checks. The Vercel project/domain were not replaced.

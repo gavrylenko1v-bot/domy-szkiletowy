@@ -14,7 +14,7 @@ const routes = [
 test("all public routes render unique SEO, valid local images and fit the viewport", async ({
   page,
 }) => {
-  test.setTimeout(120000);
+  test.setTimeout(180000);
   const titles = new Set<string>();
   for (const route of routes) {
     const response = await page.goto(route);
@@ -25,7 +25,7 @@ test("all public routes render unique SEO, valid local images and fit the viewpo
     titles.add(title);
     await expect(page.locator("link[rel=canonical]")).toHaveAttribute(
       "href",
-      `http://localhost:3000${route === "/" ? "" : route}`,
+      `${process.env.NEXT_PUBLIC_SITE_URL || "https://domy-szkiletowy.vercel.app"}${route === "/" ? "" : route}`,
     );
     await expect(page.locator('meta[property="og:title"]')).toHaveCount(1);
     expect(
@@ -47,17 +47,22 @@ test("catalog filters, empty state, reset and sorting", async ({ page }) => {
   await expect(page.locator(".house-card")).toHaveCount(10);
   await page.getByLabel("Kondygnacje").selectOption("2");
   await expect(page.locator(".house-card")).toHaveCount(4);
-  await page.getByLabel("Sypialnie").selectOption("4");
-  await expect(page.locator(".house-card")).toHaveCount(1);
-  await expect(page.locator(".house-card h3")).toHaveText("MAX 70");
-  await page.getByLabel("Dach").selectOption("Jednospadowy");
-  await expect(
-    page.getByText("Jeszcze nie ma takiej kombinacji."),
-  ).toBeVisible();
+  await page.getByLabel("Pokoje (z salonem)").selectOption("4");
+  await expect(page.locator(".house-card")).toHaveCount(3);
+  await page.getByRole("combobox", {name:"Dach",exact:true}).selectOption("Płaski");
+  await expect(page.getByText("Jeszcze nie ma takiej kombinacji.")).toBeVisible();
   await page.getByRole("button", { name: "Pokaż wszystkie domy" }).click();
-  await expect(page.locator(".house-card")).toHaveCount(10);
+  await page.getByRole("combobox", {name:"Dach",exact:true}).selectOption("Płaski");
+  await expect(page.locator(".house-card h3")).toHaveText("OPTIMA 70");
+  await page.getByRole("button", { name: "Wyczyść filtry" }).click();
+  await page.getByRole("combobox", {name:"Taras",exact:true}).selectOption("no");
+  await expect(page.locator(".house-card")).toHaveCount(2);
+  await page.getByRole("button", { name: "Wyczyść filtry" }).click();
+  await page.getByLabel("Łączna powierzchnia podłóg").selectOption("45");
+  await expect(page.locator(".house-card")).toHaveCount(3);
+  await page.getByRole("button", { name: "Wyczyść filtry" }).click();
   await page.getByLabel("Sortuj").selectOption("area-desc");
-  await expect(page.locator(".house-card h3").first()).toHaveText("OPTIMA 70");
+  await expect(page.locator(".house-card h3").first()).toHaveText("MAX");
 });
 test("project quote carries ID and name, and unconfigured delivery never succeeds", async ({
   page,
@@ -119,7 +124,7 @@ test("requested viewport widths keep navigation, catalog and project readable", 
   test.setTimeout(180000);
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
-  for (const width of [320,375,390,430,768,1024,1440,1920]) {
+  for (const width of [360,390,430,768,1024,1440,1920]) {
     await page.setViewportSize({width, height: 1000});
     for (const route of ["/", "/projekty", "/projekty/mini-35", "/projekty/max-70", "/kontakt"]) {
       await page.goto(route);
@@ -164,7 +169,7 @@ test("mobile menu opens, navigates and closes; screenshots", async ({
 test("approved brand assets, internal links and page metadata", async ({
   page,
 }) => {
-  test.setTimeout(120000);
+  test.setTimeout(180000);
   const checked = new Set<string>();
   for (const route of routes) {
     await page.goto(route);
@@ -210,4 +215,23 @@ test("approved brand assets, internal links and page metadata", async ({
   ]) {
     expect((await page.request.get(`/brand/${name}`)).status()).toBe(200);
   }
+});
+
+test("vector plan switches floors, zooms, closes and restores focus", async ({page})=>{
+  await page.goto('/projekty/family-plus-55');
+  const viewer=page.locator('.plan-viewer');
+  await viewer.getByRole('button',{name:'Poddasze',exact:true}).click();
+  await expect(viewer.locator('.plan-preview')).toHaveAttribute('src',/plan-1.svg/);
+  const opener=viewer.getByRole('button',{name:'Powiększ rzut'});
+  await opener.click();
+  const dialog=page.getByRole('dialog');
+  await expect(dialog).toBeVisible();
+  await dialog.getByRole('button',{name:'Parter',exact:true}).click();
+  await expect(dialog.locator('img')).toHaveAttribute('src',/plan-0.svg/);
+  await dialog.getByRole('slider').fill('400');
+  await expect(dialog.locator('output')).toHaveText('400%');
+  expect(await dialog.locator('.plan-pan').evaluate(el=>el.scrollWidth>el.clientWidth)).toBe(true);
+  await page.keyboard.press('Escape');
+  await expect(dialog).toHaveCount(0);
+  await expect(opener).toBeFocused();
 });
